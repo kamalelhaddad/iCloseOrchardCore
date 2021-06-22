@@ -1,0 +1,38 @@
+<div class="header__part header__right" id="navbarResponsive">
+    <ul class="jeader__nav flex">
+      {% for item in Model.Items %}
+      {{ item | shape_render }}
+      {% endfor %}
+      <li>
+        <a class="enterLink" href="#">
+          <img src="/iCloseTheme/img/icons/enter.svg" alt="">
+            <span>Login</span>
+        </a>
+      </li>
+    </ul>
+</div>
+<!--<div class="header__part header__right">
+  <ul class="jeader__nav flex">
+    <li>
+      <a href="#">About us</a>
+    </li>
+    <li>
+      <a href="#">Integrations</a>
+    </li>
+    <li>
+      <a href="#">Features</a>
+    </li>
+    <li>
+      <a href="#">Pricing</a>
+    </li>
+    <li>
+      <a class="active" href="#">Contact</a>
+    </li>
+    <li>
+      <a class="enterLink" href="#">
+        <img src="/iCloseTheme/img/icons/enter.svg" alt="">
+          <span>Login</span>
+      </a>
+    </li>
+  </ul>
+</div>-->

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
     <Folder Include="Localization\" />
   </ItemGroup>
 
@@ -17,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\iCloseAdmin\iCloseAdmin.csproj" />
     <ProjectReference Include="..\iCloseTheme\iCloseTheme.csproj" />
   </ItemGroup>
 

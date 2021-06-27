@@ -1,0 +1,7 @@
+﻿[
+  {
+    "generateSourceMaps": false,
+    "inputs": [ "wwwroot/scss/iCloseAdmin.scss" ],
+    "output": "wwwroot/Styles/iCloseAdmin.css"
+  }
+]

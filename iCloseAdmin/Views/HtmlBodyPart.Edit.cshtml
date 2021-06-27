@@ -1,0 +1,218 @@
+@using OrchardCore.ContentManagement.Metadata.Models
+@using OrchardCore.Html.Settings
+@using OrchardCore.Localization
+@model OrchardCore.Html.ViewModels.HtmlBodyPartViewModel
+
+@{
+    var settings = Model.TypePartDefinition.GetSettings<HtmlBodyPartSettings>();
+    var culture = await Orchard.GetContentCultureAsync(Model.ContentItem);
+}
+
+@await DisplayAsync(await New.ShortcodeModal())
+<link href="/admin/css/editor.css" rel="stylesheet">
+
+<style>
+    .responsive-iframe {
+        position: relative;
+        padding-bottom: 56.25%; /*16:9*/
+        height: 0;
+        overflow: hidden;
+    }
+
+    .iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    :root[data-theme=default] .modal {
+        position: fixed;
+        top: 0;
+        z-index: 1050;
+        display: none;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        outline: 0;
+    }
+</style>
+@{
+    if(Model.ContentItem.ContentType != "LivePage") {
+        <div class="form-group">
+            <label asp-for="Html">@Model.TypePartDefinition.DisplayName()</label>
+            <textarea asp-for="Html" rows="5" class="form-control content-preview-text" dir="@culture.GetLanguageDirection()"></textarea>
+            <span class="hint">@T["The body of the content item."]</span>
+        </div>
+
+        <style asp-name="codemirror"></style>
+        <script asp-name="codemirror" depends-on="admin" at="Foot"></script>
+        <script asp-name="codemirror-addon-display-autorefresh" at="Foot"></script>
+        <script asp-name="codemirror-addon-edit-closetag" at="Foot"></script>
+        <script asp-name="codemirror-addon-selection-active-line" at="Foot"></script>
+        <script asp-name="codemirror-mode-css" at="Foot"></script>
+        <script asp-name="codemirror-mode-htmlmixed" at="Foot"></script>
+        <script asp-name="codemirror-mode-javascript" at="Foot"></script>
+        <script asp-name="codemirror-mode-xml" at="Foot"></script>
+        <script at="Foot">
+            $(function() {
+                var optionsTextArea = document.getElementById('@Html.IdFor(x => x.Html)');
+                @* When part rendered by a flow part only the elements scripts are rendered, so the html element will not exist. *@
+                if (optionsTextArea) {
+                    var editor = CodeMirror.fromTextArea(optionsTextArea,
+                        {
+                            autoCloseTags: true,
+                            autoRefresh: true,
+                            lineNumbers: true,
+                            lineWrapping: true,
+                            matchBrackets: true,
+                            styleActiveLine: true,
+                            mode: { name: "htmlmixed" }
+                        });
+
+                    initializeCodeMirrorShortcodeWrapper(editor);
+                }
+            });
+        </script>
+    }
+    else {
+        <!-- jquery-->
+       
+        @*<textarea asp-for="Html" rows="5" class="form-control content-preview-text" dir="@culture.GetLanguageDirection()"></textarea>*@
+        <div class="form-group">
+            <label asp-for="Html">@Model.TypePartDefinition.DisplayName()</label>
+            <div id="@Html.IdFor(x => x.Html)_editor" asp-for="Text" class="responsive-iframe"  dir="@culture.GetLanguageDirection()">
+                <iframe id="editor-iframe" class="iframe" src="" allowfullscreen="true"></iframe>
+            </div>
+            <textarea asp-for="Html" hidden>@Html.Raw(Model.Html)</textarea>
+            <span class="hint">@T["The body of the content item."]</span>
+        </div>
+        @*<div class="responsive-iframe">
+            
+        </div>*@
+        <script at="Foot">
+            $(function () {
+                var editorWindow = $('#editor-iframe')[0].contentWindow;
+                //$("#iframe-wrapper")
+                $("#editor-iframe").attr('src', '/admin/editor.html?t='+@DateTime.Now.Ticks);
+                //var doc = new DOMParser().parseFromString('@Model.ContentItem.Content.HtmlBodyPart.Html', "text/html");
+
+
+                var textArea = document.getElementById('@Html.IdFor(x => x.Html)');
+
+                //editor.getModel().setValue(textArea.value);
+                //setTimeout(function() {
+                //    self.Vvveb.Builder.setHtml(textArea.value);
+                //}, 200);
+
+                var cancelId = setInterval(function () {
+                    var x = 1;
+                    console.log(x++);
+                    if (editorWindow.FrameDocument != null) {
+                        if (textArea.value != '') {
+                            editorWindow.Vvveb.Builder.setHtml(textArea.value);
+                        }
+                        //$("#editor-iframe").contents().find("#save-btn").on("click", function () {
+                        //    //alert("cliecked");
+                        //    var payload = {};
+                        //    var body = editorWindow.Vvveb.Builder.selectedEl.html();
+                        //    //Vvveb.Builder.iframe.src = 'demo/my-page/index.html';
+                        //    //var html = Vvveb.Builder.iframe.innerHTML;
+                        //    var fm = $("#editor-iframe").contents().find("#contentIframe");
+                        //    fm.attr('src','/admin/demo/my-page/index.html');
+                        //    setTimeout(function () {
+                        //        console.log(fm.contents()[0]);
+                        //        fm.contents()[0].body.innerHTML = body;
+                        //    }, 3000)
+                        //    //payload["path"] = "admin/demo/my-page/index.html";
+                        //});
+                        clearInterval(cancelId);
+                    }
+                }, 1000);
+                
+
+                window.addEventListener("submit", function () {
+                    textArea.value = editorWindow.Vvveb.Builder.getHtml();
+                });
+                var section = null;
+                window.addEventListener('message', function(event) {
+                    if (event.origin === window.location.origin) {
+                        
+                        console.log(editorWindow.Vvveb.Builder.selectedEl);
+                        console.log('Received message: ' + event.data.message);
+                        section = event.data.message;
+                        $("#mediaApp").detach().appendTo('#mediaModalBody .modal-body');
+                        $("#mediaApp").show();
+                        mediaApp.selectedMedias = [];
+                        $('#mediaModalBody').modal('show');
+                        $('#mediaHtmlFieldSelectButton').off('click');
+                        
+                    }
+                    else
+                    {
+                        //alert('Origin not allowed!');
+                        console.log('event origin : ' + event.origin + ' not equal site origin : ' + window.location.origin);
+                    }
+
+                }, false);
+
+                $('#mediaBodySelectButton').on('click', function (e) {
+                    var node = editorWindow.Vvveb.Builder.selectedEl; 
+                    for (i = 0; i < mediaApp.selectedMedias.length; i++) {
+                        if (section == null || section == 'default') {
+                            node.attr('src', '/media/' + mediaApp.selectedMedias[i].mediaPath);
+                            //return node;
+                        } else {
+                            $('#mediaModalBody').modal('hide');
+                            var url = "url(/media/" + mediaApp.selectedMedias[i].mediaPath + ")";
+                            url.replace('""', '"');
+                            node.css('background-image', url);
+                            //$('myObject').css('background-image', 'url(' + imageUrl + ')');
+                            //return node;
+                        }
+                    }
+
+                    $('#mediaModalBody').modal('hide');
+                    node.trigger('click');
+
+                    return node;
+                });
+
+                
+                //$("#mainDiv").load("/editor.html", function () {
+                //    var url = "/admin/demo/blog/index.html";
+                //    Vvveb.Builder.init(url, function () {
+                //        //    //run code after page/iframe is loaded
+                //    });
+                //});
+                //Vvveb.FileManager.init();
+
+
+
+                //var cancelId = setInterval(function () {
+                //    if (canvas != null) {
+                //        Vvveb.FileManager.loadPage("blog");
+                //        //Vvveb.Builder.init(url, function () {
+                //        //    //run code after page/iframe is loaded
+                //        //});
+                //        clearInterval(cancelId);
+                //    }
+                //}, 1000);
+
+                @*var doc = new DOMParser().parseFromString('@Model.ContentItem.Content.HtmlBodyPart.Html', "text/html");
+                $("#my-main-iframe").ready(function () {
+                    alert("ready!!");
+                    var url = "/admin/demo/blog/index.html";
+                    Vvveb.Builder.init(url, function () {
+                        //run code after page/iframe is loaded
+                    });
+                });
+                Vvveb.FileManager.loadPage("landing-page");*@
+                //console.log(doc.documentElement.textContent);
+
+
+
+            });
+</script>
+    }
+}

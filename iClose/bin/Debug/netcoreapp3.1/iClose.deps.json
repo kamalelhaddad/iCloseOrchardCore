@@ -26,6 +26,7 @@
         "dependencies": {
           "OrchardCore.Application.Cms.Targets": "1.0.0-rc2-15734",
           "OrchardCore.Logging.NLog": "1.0.0-rc2-15734",
+          "iCloseAdmin": "1.0.0",
           "iCloseTheme": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -6197,6 +6198,23 @@
           "lib/netstandard2.0/YesSql.Provider.SqlServer.dll": {}
         }
       },
+      "iCloseAdmin/1.0.0": {
+        "dependencies": {
+          "OrchardCore.Admin": "1.0.0-rc2-15734",
+          "OrchardCore.ContentManagement.Abstractions": "1.0.0-rc2-15734",
+          "OrchardCore.DisplayManagement": "1.0.0-rc2-15734",
+          "OrchardCore.Html": "1.0.0-rc2-15734",
+          "OrchardCore.ResourceManagement": "1.0.0-rc2-15734",
+          "OrchardCore.Theme.Targets": "1.0.0-rc2-15734",
+          "OrchardCore.Themes": "1.0.0-rc2-15734"
+        },
+        "runtime": {
+          "iCloseAdmin.dll": {}
+        },
+        "compile": {
+          "iCloseAdmin.dll": {}
+        }
+      },
       "iCloseTheme/1.0.0": {
         "dependencies": {
           "OrchardCore.DisplayManagement": "1.0.0-rc2-15734",
@@ -10548,6 +10566,11 @@
       "sha512": "sha512-+E+C4g/YyelfB+KSaJuhr0A2TED6CWLR+RVbdNYwD0Gwna4k/SEOY+t1ob3MevRO92Dv2LyT+mkDm+VzSlPIUQ==",
       "path": "yessql.provider.sqlserver/1.0.0-beta-1637",
       "hashPath": "yessql.provider.sqlserver.1.0.0-beta-1637.nupkg.sha512"
+    },
+    "iCloseAdmin/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "iCloseTheme/1.0.0": {
       "type": "project",

@@ -16,6 +16,8 @@ using System.Reflection;
     "CloseTheme\\Recipes\\iclose.recipe.json")]
 [assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\Recipes\\Snippets\\footer.html|C:\\Users\\Kamal\\source\\repos\\iClose" +
     "\\iCloseTheme\\Recipes\\Snippets\\footer.html")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\Recipes\\Snippets\\header.html|C:\\Users\\Kamal\\source\\repos\\iClose" +
+    "\\iCloseTheme\\Recipes\\Snippets\\header.html")]
 [assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\Recipes\\Snippets\\landingpage.liquid|C:\\Users\\Kamal\\source\\repos" +
     "\\iClose\\iCloseTheme\\Recipes\\Snippets\\landingpage.liquid")]
 [assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\Views\\Content.liquid|C:\\Users\\Kamal\\source\\repos\\iClose\\iCloseT" +
@@ -52,6 +54,8 @@ using System.Reflection;
     "iCloseTheme\\Views\\Widget-RawHtml.liquid")]
 [assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\Views\\Widget.Wrapper-Zone-HeadMeta.liquid|C:\\Users\\Kamal\\source" +
     "\\repos\\iClose\\iCloseTheme\\Views\\Widget.Wrapper-Zone-HeadMeta.liquid")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\contact.html|C:\\Users\\Kamal\\source\\repos\\iClose\\iCloseT" +
+    "heme\\wwwroot\\contact.html")]
 [assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\css\\main.min.css|C:\\Users\\Kamal\\source\\repos\\iClose\\iCl" +
     "oseTheme\\wwwroot\\css\\main.min.css")]
 [assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\css\\maps\\main.min.css.map|C:\\Users\\Kamal\\source\\repos\\i" +
@@ -60,6 +64,152 @@ using System.Reflection;
     "CloseTheme\\wwwroot\\css\\vendor.min.css")]
 [assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2).zip|C:\\Users\\Kamal\\source\\repos\\iClose\\iClos" +
     "eTheme\\wwwroot\\iClose (2).zip")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\contact.html|C:\\Users\\Kamal\\source\\repos\\iCl" +
+    "ose\\iCloseTheme\\wwwroot\\iClose (2)\\contact.html")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\css\\main.min.css|C:\\Users\\Kamal\\source\\repos" +
+    "\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\css\\main.min.css")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\css\\maps\\main.min.css.map|C:\\Users\\Kamal\\sou" +
+    "rce\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\css\\maps\\main.min.css.map")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\css\\vendor.min.css|C:\\Users\\Kamal\\source\\rep" +
+    "os\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\css\\vendor.min.css")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\faq.html|C:\\Users\\Kamal\\source\\repos\\iClose\\" +
+    "iCloseTheme\\wwwroot\\iClose (2)\\faq.html")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\fd_1.jpg|C:\\Users\\Kamal\\source\\r" +
+    "epos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\fd_1.jpg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\fd_2.jpg|C:\\Users\\Kamal\\source\\r" +
+    "epos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\fd_2.jpg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\fd_3.jpg|C:\\Users\\Kamal\\source\\r" +
+    "epos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\fd_3.jpg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\fd_4.jpg|C:\\Users\\Kamal\\source\\r" +
+    "epos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\fd_4.jpg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\fd_5.jpg|C:\\Users\\Kamal\\source\\r" +
+    "epos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\fd_5.jpg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\more.jpg|C:\\Users\\Kamal\\source\\r" +
+    "epos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\more.jpg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\part_1.svg|C:\\Users\\Kamal\\source" +
+    "\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\part_1.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\part_2.svg|C:\\Users\\Kamal\\source" +
+    "\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\part_2.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\part_3.svg|C:\\Users\\Kamal\\source" +
+    "\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\part_3.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\part_4.svg|C:\\Users\\Kamal\\source" +
+    "\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\part_4.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\part_5.svg|C:\\Users\\Kamal\\source" +
+    "\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\part_5.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\part_6.svg|C:\\Users\\Kamal\\source" +
+    "\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\part_6.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\part_7.svg|C:\\Users\\Kamal\\source" +
+    "\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\content\\part_7.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\client__dec.png|C:\\Users\\Kamal\\sou" +
+    "rce\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\client__dec.png")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\comp__dec.png|C:\\Users\\Kamal\\sourc" +
+    "e\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\comp__dec.png")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\contact_1.svg|C:\\Users\\Kamal\\sourc" +
+    "e\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\contact_1.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\contact_2.svg|C:\\Users\\Kamal\\sourc" +
+    "e\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\contact_2.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\dash.png|C:\\Users\\Kamal\\source\\rep" +
+    "os\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\dash.png")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\file__bg.png|C:\\Users\\Kamal\\source" +
+    "\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\file__bg.png")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\file__dec.png|C:\\Users\\Kamal\\sourc" +
+    "e\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\file__dec.png")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\integ__dec.png|C:\\Users\\Kamal\\sour" +
+    "ce\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\integ__dec.png")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\integ__decmob.png|C:\\Users\\Kamal\\s" +
+    "ource\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\integ__decmob.png")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\main__bg.jpg|C:\\Users\\Kamal\\source" +
+    "\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\main__bg.jpg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\map.png|C:\\Users\\Kamal\\source\\repo" +
+    "s\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\map.png")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\Mask Group.png|C:\\Users\\Kamal\\sour" +
+    "ce\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\Mask Group.png")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\padv_1.svg|C:\\Users\\Kamal\\source\\r" +
+    "epos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\padv_1.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\padv_2.svg|C:\\Users\\Kamal\\source\\r" +
+    "epos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\padv_2.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\padv_3.svg|C:\\Users\\Kamal\\source\\r" +
+    "epos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\padv_3.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\pl_1.svg|C:\\Users\\Kamal\\source\\rep" +
+    "os\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\pl_1.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\pl_2.svg|C:\\Users\\Kamal\\source\\rep" +
+    "os\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\pl_2.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\pl_3.svg|C:\\Users\\Kamal\\source\\rep" +
+    "os\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\pl_3.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\pl_4.svg|C:\\Users\\Kamal\\source\\rep" +
+    "os\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\pl_4.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\pl_5.svg|C:\\Users\\Kamal\\source\\rep" +
+    "os\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\pl_5.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\pl_6.svg|C:\\Users\\Kamal\\source\\rep" +
+    "os\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\pl_6.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\sleep__dec.png|C:\\Users\\Kamal\\sour" +
+    "ce\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\sleep__dec.png")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\types__dec1.svg|C:\\Users\\Kamal\\sou" +
+    "rce\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\types__dec1.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\types__dec2.svg|C:\\Users\\Kamal\\sou" +
+    "rce\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\decor\\types__dec2.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\choose_1.svg|C:\\Users\\Kamal\\source" +
+    "\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\choose_1.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\choose_2.svg|C:\\Users\\Kamal\\source" +
+    "\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\choose_2.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\choose_3.svg|C:\\Users\\Kamal\\source" +
+    "\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\choose_3.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\choose_4.svg|C:\\Users\\Kamal\\source" +
+    "\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\choose_4.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\con_1.svg|C:\\Users\\Kamal\\source\\re" +
+    "pos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\con_1.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\con_2.svg|C:\\Users\\Kamal\\source\\re" +
+    "pos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\con_2.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\enter.svg|C:\\Users\\Kamal\\source\\re" +
+    "pos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\enter.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\logo.png|C:\\Users\\Kamal\\source\\rep" +
+    "os\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\logo.png")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\logo.svg|C:\\Users\\Kamal\\source\\rep" +
+    "os\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\logo.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\logo__big.svg|C:\\Users\\Kamal\\sourc" +
+    "e\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\logo__big.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\trans_1.png|C:\\Users\\Kamal\\source\\" +
+    "repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\trans_1.png")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\trans_1.svg|C:\\Users\\Kamal\\source\\" +
+    "repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\trans_1.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\trans_2.png|C:\\Users\\Kamal\\source\\" +
+    "repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\trans_2.png")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\trans_2.svg|C:\\Users\\Kamal\\source\\" +
+    "repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\trans_2.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\trans_3.svg|C:\\Users\\Kamal\\source\\" +
+    "repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\trans_3.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\trans_4.svg|C:\\Users\\Kamal\\source\\" +
+    "repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\trans_4.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\trans_5.svg|C:\\Users\\Kamal\\source\\" +
+    "repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\trans_5.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\trans_6.svg|C:\\Users\\Kamal\\source\\" +
+    "repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\trans_6.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\types_1.svg|C:\\Users\\Kamal\\source\\" +
+    "repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\types_1.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\types_2.svg|C:\\Users\\Kamal\\source\\" +
+    "repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\types_2.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\types_3.svg|C:\\Users\\Kamal\\source\\" +
+    "repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\types_3.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\types_4.svg|C:\\Users\\Kamal\\source\\" +
+    "repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\types_4.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\types_5.svg|C:\\Users\\Kamal\\source\\" +
+    "repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\img\\icons\\types_5.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\index.html|C:\\Users\\Kamal\\source\\repos\\iClos" +
+    "e\\iCloseTheme\\wwwroot\\iClose (2)\\index.html")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\integrations.html|C:\\Users\\Kamal\\source\\repo" +
+    "s\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\integrations.html")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\js\\custom.min.js|C:\\Users\\Kamal\\source\\repos" +
+    "\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\js\\custom.min.js")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\js\\maps\\custom.min.js.map|C:\\Users\\Kamal\\sou" +
+    "rce\\repos\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\js\\maps\\custom.min.js.map")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\js\\vendor.min.js|C:\\Users\\Kamal\\source\\repos" +
+    "\\iClose\\iCloseTheme\\wwwroot\\iClose (2)\\js\\vendor.min.js")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\login.html|C:\\Users\\Kamal\\source\\repos\\iClos" +
+    "e\\iCloseTheme\\wwwroot\\iClose (2)\\login.html")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\mail.php|C:\\Users\\Kamal\\source\\repos\\iClose\\" +
+    "iCloseTheme\\wwwroot\\iClose (2)\\mail.php")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\iClose (2)\\pricing.html|C:\\Users\\Kamal\\source\\repos\\iCl" +
+    "ose\\iCloseTheme\\wwwroot\\iClose (2)\\pricing.html")]
 [assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\img\\content\\fd_1.jpg|C:\\Users\\Kamal\\source\\repos\\iClose" +
     "\\iCloseTheme\\wwwroot\\img\\content\\fd_1.jpg")]
 [assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\img\\content\\fd_2.jpg|C:\\Users\\Kamal\\source\\repos\\iClose" +
@@ -180,6 +330,8 @@ using System.Reflection;
     "e\\iCloseTheme\\wwwroot\\img\\icons\\types_4.svg")]
 [assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\img\\icons\\types_5.svg|C:\\Users\\Kamal\\source\\repos\\iClos" +
     "e\\iCloseTheme\\wwwroot\\img\\icons\\types_5.svg")]
+[assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\integrations.html|C:\\Users\\Kamal\\source\\repos\\iClose\\iC" +
+    "loseTheme\\wwwroot\\integrations.html")]
 [assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\js\\custom.min.js|C:\\Users\\Kamal\\source\\repos\\iClose\\iCl" +
     "oseTheme\\wwwroot\\js\\custom.min.js")]
 [assembly: OrchardCore.Modules.Manifest.ModuleAssetAttribute("Areas\\iCloseTheme\\wwwroot\\js\\maps\\custom.min.js.map|C:\\Users\\Kamal\\source\\repos\\i" +

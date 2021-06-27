@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "iClose",
   "displayName": "iClose",
   "description": "Ready to use company website.",
@@ -80,7 +80,7 @@
         "ContentItemId": "[js: variables('landingContentItemId')]"
       },
       "LayerSettings": {
-        "Zones": [ "Footer" ]
+        "Zones": [ "Header", "Footer" ]
       }
     },
     {
@@ -143,24 +143,23 @@
           ]
         },
         {
-          "Name": "LandingPage",
-          "DisplayName": "Landing Page",
+          "Name": "LiquidPage",
+          "DisplayName": "Liquid Page",
           "Settings": {
             "ContentTypeSettings": {
               "Creatable": true,
               "Draftable": true,
               "Versionable": true,
-              "Listable": true,
-              "Securable": true
+              "Listable": true
             }
           },
           "ContentTypePartDefinitionRecords": [
             {
-              "PartName": "LandingPage",
-              "Name": "LandingPage",
+              "PartName": "LiquidPage",
+              "Name": "LiquidPage",
               "Settings": {
                 "ContentTypePartSettings": {
-                  "Position": "8"
+                  "Position": "2"
                 }
               }
             },
@@ -179,6 +178,15 @@
               }
             },
             {
+              "PartName": "LiquidPart",
+              "Name": "LiquidPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "3"
+                }
+              }
+            },
+            {
               "PartName": "TitlePart",
               "Name": "TitlePart",
               "Settings": {
@@ -186,223 +194,60 @@
                   "Position": "0"
                 }
               }
+            }
+          ]
+        },
+        {
+          "Name": "LivePage",
+          "DisplayName": "Live Page",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Creatable": true,
+              "Listable": true,
+              "Draftable": true,
+              "Versionable": true,
+              "Securable": true
             },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
             {
-              "PartName": "BagPart",
-              "Name": "Services",
+              "PartName": "LivePage",
+              "Name": "LivePage",
               "Settings": {
                 "ContentTypePartSettings": {
-                  "DisplayName": "Services",
-                  "Description": "Provides a collection behavior for your content item.",
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "AutoroutePart",
+              "Name": "AutoroutePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                },
+                "AutoroutePartSettings": {
+                  "AllowCustomPath": true,
+                  "AllowUpdatePath": true
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "PartName": "HtmlBodyPart",
+              "Name": "HtmlBodyPart",
+              "Settings": {
+                "ContentTypePartSettings": {
                   "Position": "3"
                 },
-                "BagPartSettings": {
-                  "ContainedContentTypes": [
-                    "Service"
-                  ]
-                }
-              }
-            },
-            {
-              "PartName": "BagPart",
-              "Name": "Portfolio",
-              "Settings": {
-                "BagPartSettings": {
-                  "ContainedContentTypes": [
-                    "Project"
-                  ]
+                "HtmlBodyPartSettings": {
+                  "SanitizeHtml": false
                 },
-                "ContentTypePartSettings": {
-                  "DisplayName": "Portfolio",
-                  "Description": "Provides a collection behavior for your content item.",
-                  "Position": "4"
-                }
-              }
-            },
-            {
-              "PartName": "BagPart",
-              "Name": "About",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "DisplayName": "About",
-                  "Description": "A collection of milestones",
-                  "Position": "5"
+                "HtmlBodyPartTrumbowygEditorSettings": {
+                  "Options": "{\r\n    autogrow: true,\r\n    btns: [\r\n        [\"viewHTML\"],\r\n        [\"undo\", \"redo\"],\r\n        [\"formatting\"],\r\n        [\"strong\", \"em\", \"del\"],\r\n        [\"foreColor\", \"backColor\"],\r\n        [\"superscript\", \"subscript\"],\r\n        [\"link\"],\r\n        [\"insertShortcode\"],\r\n        [\"image\"],\r\n        [\"align\"],\r\n        [\"unorderedList\", \"orderedList\"],\r\n        [\"horizontalRule\"],\r\n        [\"removeformat\"],\r\n        [\"fullscreen\"]\r\n    ],\r\n    btnsDef: {\r\n        align: {\r\n            dropdown: [\"justifyLeft\", \"justifyCenter\", \"justifyRight\", \"justifyFull\"],\r\n            ico: \"justifyLeft\"\r\n        },\r\n        image: {\r\n            dropdown: [\"insertImage\", \"base64\", \"noembed\"],\r\n            ico: \"insertImage\"\r\n        }\r\n    }\r\n}"
                 },
-                "BagPartSettings": {
-                  "ContainedContentTypes": [
-                    "Milestone"
-                  ]
-                }
-              }
-            },
-            {
-              "PartName": "BagPart",
-              "Name": "Team",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "DisplayName": "Team",
-                  "Description": "Team members",
-                  "Position": "6"
-                },
-                "BagPartSettings": {
-                  "ContainedContentTypes": [
-                    "TeamMember"
-                  ]
-                }
-              }
-            },
-            {
-              "PartName": "BagPart",
-              "Name": "Clients",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "DisplayName": "Clients",
-                  "Description": "Provides a collection behavior for your content item.",
-                  "Position": "7"
-                },
-                "BagPartSettings": {
-                  "ContainedContentTypes": [
-                    "Client"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "Name": "Service",
-          "DisplayName": "Service",
-          "ContentTypePartDefinitionRecords": [
-            {
-              "PartName": "Service",
-              "Name": "Service",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "Position": "2"
-                }
-              }
-            },
-            {
-              "PartName": "HtmlBodyPart",
-              "Name": "HtmlBodyPart",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "Position": "1"
-                }
-              }
-            },
-            {
-              "PartName": "TitlePart",
-              "Name": "TitlePart",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "Position": "0"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "Name": "Project",
-          "DisplayName": "Project",
-          "ContentTypePartDefinitionRecords": [
-            {
-              "PartName": "Project",
-              "Name": "Project",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "Position": "2"
-                }
-              }
-            },
-            {
-              "PartName": "HtmlBodyPart",
-              "Name": "HtmlBodyPart",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "Position": "1"
-                }
-              }
-            },
-            {
-              "PartName": "TitlePart",
-              "Name": "TitlePart",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "Position": "0"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "Name": "Milestone",
-          "DisplayName": "Milestone",
-          "ContentTypePartDefinitionRecords": [
-            {
-              "PartName": "Milestone",
-              "Name": "Milestone",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "Position": "0"
-                }
-              }
-            },
-            {
-              "PartName": "HtmlBodyPart",
-              "Name": "HtmlBodyPart",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "Position": "2"
-                }
-              }
-            },
-            {
-              "PartName": "TitlePart",
-              "Name": "TitlePart",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "Position": "1"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "Name": "TeamMember",
-          "DisplayName": "Team Member",
-          "ContentTypePartDefinitionRecords": [
-            {
-              "PartName": "TeamMember",
-              "Name": "TeamMember",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "Position": "1"
-                }
-              }
-            },
-            {
-              "PartName": "TitlePart",
-              "Name": "TitlePart",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "Position": "0"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "Name": "Client",
-          "DisplayName": "Client",
-          "ContentTypePartDefinitionRecords": [
-            {
-              "PartName": "Client",
-              "Name": "Client",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "Position": "1"
-                }
+                "ContentIndexSettings": {}
               }
             },
             {
@@ -552,185 +397,32 @@
       ],
       "ContentParts": [
         {
-          "Name": "Service",
-          "Settings": {},
-          "ContentPartFieldDefinitionRecords": [
-            {
-              "FieldName": "TextField",
-              "Name": "IconClass",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Icon Class",
-                  "Position": "0"
-                },
-                "TextFieldSettings": {
-                  "Hint": "The icon css class from font-awesome. e.g., fa-laptop, fa-shopping-cart, fa-lock"
-                }
-              }
-            }
-          ]
+          "Name": "LiquidPart",
+          "Settings": {
+            "ContentPartSettings": {}
+          },
+          "ContentPartFieldDefinitionRecords": []
         },
         {
-          "Name": "Project",
-          "Settings": {},
-          "ContentPartFieldDefinitionRecords": [
-            {
-              "FieldName": "MediaField",
-              "Name": "Image",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Image",
-                  "Position": "1"
-                },
-                "MediaFieldSettings": {
-                  "Required": true,
-                  "Multiple": false
-                }
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "Category",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Category",
-                  "Position": "0"
-                },
-                "TextFieldSettings": {
-                  "Hint": "The category that is displayed below the title"
-                }
-              }
+          "Name": "AutoroutePart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a custom url for your content item."
             }
-          ]
+          },
+          "ContentPartFieldDefinitionRecords": []
         },
         {
-          "Name": "Milestone",
-          "Settings": {},
-          "ContentPartFieldDefinitionRecords": [
-            {
-              "FieldName": "TextField",
-              "Name": "Date",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Date",
-                  "Position": "0"
-                }
-              }
-            },
-            {
-              "FieldName": "MediaField",
-              "Name": "Image",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Image",
-                  "Position": "1"
-                },
-                "MediaFieldSettings": {
-                  "Required": true,
-                  "Multiple": false
-                }
-              }
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a Title for your content item.",
+              "DefaultPosition": "0"
             }
-          ]
-        },
-        {
-          "Name": "TeamMember",
-          "Settings": {},
-          "ContentPartFieldDefinitionRecords": [
-            {
-              "FieldName": "TextField",
-              "Name": "Occupation",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Occupation",
-                  "Position": "0"
-                }
-              }
-            },
-            {
-              "FieldName": "MediaField",
-              "Name": "Picture",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Picture",
-                  "Position": "1"
-                },
-                "MediaFieldSettings": {
-                  "Required": true,
-                  "Multiple": false
-                }
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "Twitter",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Twitter",
-                  "Position": "2"
-                },
-                "TextFieldSettings": {
-                  "Hint": "Twitter handle, e.g. @BillGates"
-                }
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "Facebook",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Facebook",
-                  "Position": "3"
-                },
-                "TextFieldSettings": {
-                  "Hint": "Facebook handle"
-                }
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "LinkedIn",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "LinkedIn",
-                  "Position": "4"
-                },
-                "TextFieldSettings": {
-                  "Hint": "LinkedIn handle"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "Name": "Client",
-          "Settings": {},
-          "ContentPartFieldDefinitionRecords": [
-            {
-              "FieldName": "MediaField",
-              "Name": "Logo",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Logo",
-                  "Position": "0"
-                },
-                "MediaFieldSettings": {
-                  "Required": true,
-                  "Multiple": false
-                }
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "Url",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Url",
-                  "Position": "1"
-                }
-              }
-            }
-          ]
+          },
+          "ContentPartFieldDefinitionRecords": []
         },
         {
           "Name": "RawHtml",
@@ -819,6 +511,21 @@
               }
             }
           ]
+        },
+        {
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides an HTML Body for your content item."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "LivePage",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": []
         }
       ]
     },
@@ -841,8 +548,160 @@
           },
           "RawHtml": {
             "Content": {
+              "Html": "<footer class=\"footer\">\r\n    <div class=\"container\">\r\n        <div class=\"footer__content flex\">\r\n            <div class=\"footer__part flex\">\r\n                <div class=\"footer__left\">\r\n                    <a href=\"#\" class=\"footer__logo\">\r\n                        <img src=\"iCloseTheme/img/icons/logo.png\" alt=\"\">\r\n                        <span><span>i</span>Close.<span>ca</span></span>\r\n                    </a>\r\n                    <ul class=\"footer__soc flex\">\r\n                        <li>\r\n                            <a href=\"#\" target=\"_blank\">\r\n                                <svg width=\"45\" height=\"45\" viewBox=\"0 0 45 45\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n                                    <path d=\"M45 22.5C45 10.0723 34.9277 0 22.5 0C10.0723 0 0 10.0723 0 22.5C0 34.9277 10.0723 45 22.5 45C22.6318 45 22.7637 45 22.8955 44.9912V27.4834H18.0615V21.8496H22.8955V17.7012C22.8955 12.8936 25.8311 10.2744 30.1201 10.2744C32.1768 10.2744 33.9434 10.4238 34.4531 10.4941V15.5215H31.5C29.1709 15.5215 28.7139 16.6289 28.7139 18.2549V21.8408H34.2949L33.5654 27.4746H28.7139V44.1299C38.1182 41.4316 45 32.7744 45 22.5Z\" fill=\"#082854\" />\r\n                                </svg>\r\n                            </a>\r\n                        </li>\r\n                        <li>\r\n                            <a href=\"#\" target=\"_blank\">\r\n                                <svg width=\"45\" height=\"45\" viewBox=\"0 0 45 45\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n                                    <path d=\"M22.5 0C10.0755 0 0 10.0755 0 22.5C0 34.9245 10.0755 45 22.5 45C34.9245 45 45 34.9245 45 22.5C45 10.0755 34.9245 0 22.5 0ZM15.9618 34.0137H10.482V17.5277H15.9618V34.0137ZM13.222 15.2765H13.1863C11.3475 15.2765 10.1582 14.0107 10.1582 12.4286C10.1582 10.8109 11.3839 9.58008 13.2584 9.58008C15.133 9.58008 16.2865 10.8109 16.3223 12.4286C16.3223 14.0107 15.133 15.2765 13.222 15.2765ZM35.7207 34.0137H30.2416V25.1941C30.2416 22.9776 29.4482 21.4659 27.4655 21.4659C25.9518 21.4659 25.0502 22.4856 24.654 23.4699C24.5091 23.8221 24.4738 24.3145 24.4738 24.8071V34.0137H18.9943C18.9943 34.0137 19.0661 19.0743 18.9943 17.5277H24.4738V19.8619C25.202 18.7386 26.5049 17.1407 29.4121 17.1407C33.0173 17.1407 35.7207 19.497 35.7207 24.5606V34.0137Z\" fill=\"#082854\" />\r\n                                </svg>\r\n                            </a>\r\n                        </li>\r\n                        <li>\r\n                            <a href=\"#\" target=\"_blank\">\r\n                                <svg width=\"45\" height=\"45\" viewBox=\"0 0 45 45\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n                                    <path d=\"M26.8066 22.5C26.8066 24.8785 24.8785 26.8066 22.5 26.8066C20.1215 26.8066 18.1934 24.8785 18.1934 22.5C18.1934 20.1215 20.1215 18.1934 22.5 18.1934C24.8785 18.1934 26.8066 20.1215 26.8066 22.5Z\" fill=\"#082854\" />\r\n                                    <path d=\"M32.5716 14.8803C32.3646 14.3194 32.0343 13.8116 31.6052 13.3948C31.1884 12.9656 30.681 12.6354 30.1196 12.4283C29.6644 12.2515 28.9805 12.0411 27.7208 11.9837C26.3582 11.9216 25.9496 11.9082 22.4999 11.9082C19.0499 11.9082 18.6413 11.9212 17.279 11.9834C16.0194 12.0411 15.3351 12.2515 14.8802 12.4283C14.3189 12.6354 13.8111 12.9656 13.3946 13.3948C12.9655 13.8116 12.6352 14.319 12.4278 14.8803C12.251 15.3356 12.0406 16.0198 11.9832 17.2795C11.9211 18.6418 11.9077 19.0503 11.9077 22.5004C11.9077 25.9501 11.9211 26.3587 11.9832 27.7213C12.0406 28.981 12.251 29.6649 12.4278 30.1201C12.6352 30.6814 12.9651 31.1889 13.3943 31.6057C13.8111 32.0348 14.3185 32.3651 14.8799 32.5721C15.3351 32.7493 16.0194 32.9597 17.279 33.0171C18.6413 33.0792 19.0495 33.0922 22.4996 33.0922C25.95 33.0922 26.3585 33.0792 27.7205 33.0171C28.9801 32.9597 29.6644 32.7493 30.1196 32.5721C31.2464 32.1375 32.137 31.2469 32.5716 30.1201C32.7484 29.6649 32.9589 28.981 33.0166 27.7213C33.0787 26.3587 33.0918 25.9501 33.0918 22.5004C33.0918 19.0503 33.0787 18.6418 33.0166 17.2795C32.9592 16.0198 32.7488 15.3356 32.5716 14.8803ZM22.4999 29.1344C18.8356 29.1344 15.8652 26.1643 15.8652 22.5C15.8652 18.8358 18.8356 15.8657 22.4999 15.8657C26.1639 15.8657 29.1343 18.8358 29.1343 22.5C29.1343 26.1643 26.1639 29.1344 22.4999 29.1344ZM29.3966 17.1538C28.5403 17.1538 27.8461 16.4596 27.8461 15.6034C27.8461 14.7471 28.5403 14.0529 29.3966 14.0529C30.2528 14.0529 30.947 14.7471 30.947 15.6034C30.9467 16.4596 30.2528 17.1538 29.3966 17.1538Z\" fill=\"#082854\" />\r\n                                    <path d=\"M22.5 0C10.0755 0 0 10.0755 0 22.5C0 34.9245 10.0755 45 22.5 45C34.9245 45 45 34.9245 45 22.5C45 10.0755 34.9245 0 22.5 0ZM35.342 27.8267C35.2795 29.202 35.0608 30.141 34.7415 30.9629C34.0703 32.6984 32.6984 34.0703 30.9629 34.7415C30.1413 35.0608 29.202 35.2792 27.827 35.342C26.4492 35.4048 26.0091 35.4199 22.5003 35.4199C18.9912 35.4199 18.5514 35.4048 17.1733 35.342C15.7983 35.2792 14.859 35.0608 14.0374 34.7415C13.175 34.4171 12.3943 33.9086 11.7488 33.2512C11.0917 32.606 10.5833 31.825 10.2588 30.9629C9.93954 30.1413 9.72084 29.202 9.65836 27.827C9.59484 26.4489 9.58008 26.0088 9.58008 22.5C9.58008 18.9912 9.59484 18.5511 9.65801 17.1733C9.7205 15.798 9.93885 14.859 10.2581 14.0371C10.5826 13.175 11.0914 12.394 11.7488 11.7488C12.394 11.0914 13.175 10.5829 14.0371 10.2585C14.859 9.93919 15.798 9.72084 17.1733 9.65801C18.5511 9.59518 18.9912 9.58008 22.5 9.58008C26.0088 9.58008 26.4489 9.59518 27.8267 9.65836C29.202 9.72084 30.141 9.93919 30.9629 10.2581C31.825 10.5826 32.606 11.0914 33.2515 11.7488C33.9086 12.3943 34.4174 13.175 34.7415 14.0371C35.0611 14.859 35.2795 15.798 35.3423 17.1733C35.4052 18.5511 35.4199 18.9912 35.4199 22.5C35.4199 26.0088 35.4052 26.4489 35.342 27.8267Z\" fill=\"#082854\" />\r\n                                </svg>\r\n                            </a>\r\n                        </li>\r\n                        <li>\r\n                            <a href=\"#\" target=\"_blank\">\r\n                                <svg width=\"45\" height=\"45\" viewBox=\"0 0 45 45\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n                                    <path d=\"M19.6975 26.7153L27.0165 22.5L19.6975 18.2847V26.7153Z\" fill=\"#082854\" />\r\n                                    <path d=\"M22.5 0C10.0755 0 0 10.0755 0 22.5C0 34.9245 10.0755 45 22.5 45C34.9245 45 45 34.9245 45 22.5C45 10.0755 34.9245 0 22.5 0ZM36.5591 22.523C36.5591 22.523 36.5591 27.0861 35.9802 29.2865C35.6558 30.4908 34.7062 31.4405 33.5018 31.7646C31.3014 32.3438 22.5 32.3438 22.5 32.3438C22.5 32.3438 13.7216 32.3438 11.4982 31.7416C10.2938 31.4175 9.34422 30.4675 9.01978 29.2631C8.44059 27.0861 8.44059 22.5 8.44059 22.5C8.44059 22.5 8.44059 17.9372 9.01978 15.7369C9.34387 14.5325 10.3168 13.5595 11.4982 13.2354C13.6986 12.6562 22.5 12.6562 22.5 12.6562C22.5 12.6562 31.3014 12.6562 33.5018 13.2584C34.7062 13.5825 35.6558 14.5325 35.9802 15.7369C36.5824 17.9372 36.5591 22.523 36.5591 22.523Z\" fill=\"#082854\" />\r\n                                </svg>\r\n                            </a>\r\n                        </li>\r\n                        <li>\r\n                            <a href=\"#\" target=\"_blank\">\r\n                                <svg width=\"45\" height=\"45\" viewBox=\"0 0 45 45\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n                                    <path d=\"M22.5 0C10.0755 0 0 10.0755 0 22.5C0 34.9245 10.0755 45 22.5 45C34.9245 45 45 34.9245 45 22.5C45 10.0755 34.9245 0 22.5 0ZM32.7732 17.5431C32.7832 17.7645 32.788 17.987 32.788 18.2105C32.788 25.0348 27.5935 32.9041 18.0941 32.9044H18.0945H18.0941C15.1776 32.9044 12.4636 32.0495 10.1781 30.5846C10.5822 30.6323 10.9935 30.656 11.41 30.656C13.8297 30.656 16.0565 29.8306 17.8243 28.4453C15.5635 28.4034 13.6574 26.9103 12.9996 24.8583C13.3144 24.9187 13.6382 24.9517 13.9701 24.9517C14.4415 24.9517 14.8981 24.8882 15.3321 24.7697C12.969 24.2966 11.1889 22.2082 11.1889 19.7074C11.1889 19.6841 11.1889 19.6631 11.1896 19.6415C11.8855 20.0284 12.6813 20.2612 13.5286 20.2873C12.142 19.362 11.2304 17.7803 11.2304 15.9885C11.2304 15.0423 11.4862 14.1559 11.9298 13.3927C14.4765 16.5176 18.2826 18.5727 22.5748 18.7887C22.4863 18.4103 22.4406 18.0162 22.4406 17.6111C22.4406 14.7601 24.7536 12.4472 27.6056 12.4472C29.0911 12.4472 30.4328 13.0751 31.3752 14.079C32.5518 13.8469 33.6566 13.4171 34.6547 12.8255C34.2684 14.0309 33.4499 15.0423 32.3836 15.682C33.4283 15.557 34.4239 15.2799 35.3492 14.8686C34.6581 15.9044 33.7816 16.8142 32.7732 17.5431Z\" fill=\"#082854\" />\r\n                                </svg>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                </div>\r\n                <ul class=\"footer__nav\">\r\n                    <li>\r\n                        <a href=\"#\">\r\n                            Home\r\n                        </a>\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"#\">\r\n                            About us\r\n                        </a>\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"#\">\r\n                            Integrations\r\n                        </a>\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"#\">\r\n                            Features\r\n                        </a>\r\n                    </li>\r\n                    <li>\r\n                        <a href=\"#\">\r\n                            Pricing\r\n                        </a>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n            <div class=\"footer__part\">\r\n                <form class=\"signup__form\">\r\n                    <div class=\"signup__title\">\r\n                        Stay Up to Date with iClose!\r\n                    </div>\r\n                    <div class=\"signup__group\">\r\n                        <input type=\"email\" placeholder=\"Email\" class=\"signup__input\" required>\r\n\r\n                        <div class=\"button_su signup__button\">\r\n                            <span class=\"su_button_circle\"></span>\r\n                            <button class=\"button_su_innerSmall\">\r\n                                <span class=\"button_text_container\">Sign up</span>\r\n                            </button>\r\n                        </div>\r\n\r\n                    </div>\r\n                </form>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"footer__copyrhght\">\r\n        <div class=\"container\">\r\n            <div class=\"copyrhght\">\r\n                � 2021 iClose.ca. All Rights Reserved.\r\n            </div>\r\n        </div>\r\n    </div>\r\n</footer>"
+            }
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "LiquidPage",
+          "DisplayText": "Home Page",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "LiquidPage": {},
+          "AutoroutePart": {
+            "Path": "home-page",
+            "SetHomepage": true,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "TitlePart": {
+            "Title": "Home Page"
+          },
+          "LiquidPart": {
+            "Liquid": " <div class=\"wrapper\">\r\n\r\n    <section class=\"section__main\">\r\n      <div class=\"container\">\r\n        <div class=\"main__cintainer flex\">\r\n          <div class=\"main__left\">\r\n            <div class=\"main__logo\">\r\n              <img src=\"img/icons/logo__big.svg\" alt=\"\">\r\n            </div>\r\n            <div class=\"main__text\">\r\n              <p>\r\n                The first A.I. Conveyancing Software Platform for Ontario Real Estate Lawyers & Clerks\r\n              </p>\r\n            </div>\r\n          </div>\r\n          <div class=\"contact__right\">\r\n            <form class=\"contact__form formMail\">\r\n              <!-- Hidden Required Fields -->\r\n              <input type=\"hidden\" name=\"admin_email\" value=\"dmitriw@i.ua\">\r\n              <input type=\"hidden\" name=\"form_subject\" value=\"Let’s Get to Work\">\r\n              <!-- END Hidden Required Fields -->\r\n              <h2 class=\"form__title\">\r\n                Ready to Get Started?\r\n              </h2>\r\n              <div class=\"form__top flex\">\r\n                <input type=\"text\" name=\"First Name\" placeholder=\"Firm Name\" class=\"input required\">\r\n                <input type=\"email\" name=\"Email\" placeholder=\"Contact Email\" class=\"input required\">\r\n                <input type=\"text\" name=\"Contact Name\" placeholder=\"Contact Name\" class=\"input fullInput required\">\r\n              </div>\r\n              <div class=\"form__middle\">\r\n                <div class=\"fmiddle__title\">\r\n                  Which conveyancing software do you currently use?\r\n                </div>\r\n                <div class=\"radio__group\">\r\n                  <label class=\"radio__label\">\r\n                    <input type=\"radio\" checked name=\"Software\" value=\"Conveyancer\">\r\n                    <span class=\"false__radio\"></span>\r\n                    <span class=\"radio__text\">Conveyancer</span>\r\n                  </label>\r\n                  <label class=\"radio__label\">\r\n                    <input type=\"radio\" name=\"Software\" value=\"Unity\">\r\n                    <span class=\"false__radio\"></span>\r\n                    <span class=\"radio__text\">Unity</span>\r\n                  </label>\r\n                  <label class=\"radio__label\">\r\n                    <input type=\"radio\" name=\"Software\" value=\"LDD/Realti Web\">\r\n                    <span class=\"false__radio\"></span>\r\n                    <span class=\"radio__text\">LDD/Realti Web</span>\r\n                  </label>\r\n                  <label class=\"radio__label\">\r\n                    <input type=\"radio\" name=\"Software\" value=\"Other (Please specify)\">\r\n                    <span class=\"false__radio\"></span>\r\n                    <span class=\"radio__text\">Other (Please specify)</span>\r\n                  </label>\r\n                </div>\r\n              </div>\r\n              <div class=\"form__bottom flex\">\r\n                <input type=\"text\" name=\"Other\" placeholder=\"Other\" class=\"input\">\r\n\r\n                <script type=\"text/javascript\">\r\n                    var imNotARobot = function() {\r\n                        $('.recaocha__error').removeClass('error');\r\n                    };\r\n                </script>\r\n\r\n                <div class=\"recapcha__cont\">\r\n                  <div class=\"g-recaptcha\" data-callback=\"imNotARobot\" data-sitekey=\"6LefS9waAAAAAA3U_CqKV6IbyhU0HvIQnfhBaeh5\"></div>\r\n                  <div class=\"recaocha__error\"> You must check the box to confirm you are human.</div>\r\n                </div>\r\n\r\n              </div>\r\n              <a href=\"#\" onclick=\"sumbitForm($(this))\" class=\"button button__red form__button\">\r\n                <span class=\"button_text_container\">Let’s Get to Work</span>\r\n              </a>\r\n            </form>\r\n          </div>\r\n          <div class=\"main__bg\">\r\n            <img src=\"img/decor/main__bg.jpg\" alt=\"\">\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </section>\r\n\r\n    <section class=\"section__partnears\">\r\n      <div class=\"container\">\r\n        <div class=\"partnears__content flex\">\r\n          <div class=\"partnears__text\">\r\n            <p>\r\n              Our Trusted Integration & Membership Partners\r\n            </p>\r\n          </div>\r\n          <ul class=\"partnears__logos flex\">\r\n            <li>\r\n              <a href=\"#\"><img src=\"img/content/part_1.svg\" alt=\"\"></a>\r\n            </li>\r\n            <li>\r\n              <a href=\"#\"><img src=\"img/content/part_5.svg\" alt=\"\"></a>\r\n            </li>\r\n            <li>\r\n              <a href=\"#\"><img src=\"img/content/part_2.svg\" alt=\"\"></a>\r\n            </li>\r\n            <li>\r\n              <a href=\"#\"><img src=\"img/content/part_6.svg\" alt=\"\"></a>\r\n            </li>\r\n            <li>\r\n              <a href=\"#\"><img src=\"img/content/part_3.svg\" alt=\"\"></a>\r\n            </li>\r\n            <li>\r\n              <a href=\"#\"><img src=\"img/content/part_7.svg\" alt=\"\"></a>\r\n            </li>\r\n            <li>\r\n              <a href=\"#\"><img src=\"img/content/part_4.svg\" alt=\"\"></a>\r\n            </li>\r\n          </ul>\r\n        </div>\r\n      </div>\r\n    </section>\r\n\r\n    <section class=\"section__choose\">\r\n      <div class=\"container\">\r\n        <h2 class=\"shoose__title\">\r\n          Why Choose <span class=\"red\">i</span>Close\r\n        </h2>\r\n        <p class=\"choose__text\">\r\n          It is the first A.I. conveyancing software platform that was designed by real estate lawyers & clerks for real estate lawyers & clerks.  It includes all of the essential needs to run a real estate firm into one cohesive platform.\r\n        </p>\r\n        <ul class=\"choose__list flex\">\r\n          <li class=\"choose__item\">\r\n            <div class=\"choose__img\">\r\n              <img src=\"img/icons/choose_1.svg\" alt=\"\">\r\n            </div>\r\n            <h3 class=\"shoose__name\">\r\n              <span class=\"red\">i</span>Close is a Web-Based Application!\r\n            </h3>\r\n            <p class=\"choose__desc\">\r\n              We’re a web-based application, meaning all you need to use <span class=\"red\">i</span>Close\r\n              is an internet connection. You do not need servers and other expensive IT infrastructure\r\n            </p>\r\n          </li>\r\n          <li class=\"choose__item\">\r\n            <div class=\"choose__img\">\r\n              <img src=\"img/icons/choose_2.svg\" alt=\"\">\r\n            </div>\r\n            <h3 class=\"shoose__name\">\r\n              It’s Easy to Transition to <span class=\"red\">i</span>Close\r\n            </h3>\r\n            <p class=\"choose__desc\">\r\n              We understand that switching conveyancing platforms can be quite an undertaking; that’s why we have simplified the transition onto <span class=\"red\">i</span>Close\r\n            </p>\r\n          </li>\r\n          <li class=\"choose__item\">\r\n            <div class=\"choose__img\">\r\n              <img src=\"img/icons/choose_3.svg\" alt=\"\">\r\n            </div>\r\n            <h3 class=\"shoose__name\">\r\n              <span class=\"red\">i</span>Close is a Canadian company\r\n            </h3>\r\n            <p class=\"choose__desc\">\r\n              We are proudly a Canadian company.  All data is stored in Canada at three (3) different tier 3 data centers throughout Canada.\r\n            </p>\r\n          </li>\r\n          <li class=\"choose__item\">\r\n            <div class=\"choose__img\">\r\n              <img src=\"img/icons/choose_4.svg\" alt=\"\">\r\n            </div>\r\n            <h3 class=\"shoose__name\">\r\n              Up to 500% cheaper than the competition\r\n            </h3>\r\n            <p class=\"choose__desc\">\r\n              <span class=\"red\">i</span>Close is very competitively priced.   <span class=\"red\">i</span>Close is $25 plus HST, up to 500% less than the competition while providing more functionalities and a superior user experience\r\n            </p>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </section>\r\n\r\n    <section class=\"section__types\">\r\n      <div class=\"container\">\r\n        <div class=\"types__container flex\">\r\n          <div class=\"types__plates\">\r\n            <div class=\"types__part flex\">\r\n              <div class=\"types__plate\">\r\n                <div class=\"types__icon\">\r\n                  <img src=\"img/icons/types_1.svg\" alt=\"\">\r\n                </div>\r\n                <h3 class=\"types__name\">\r\n                  Purchase\r\n                </h3>\r\n              </div>\r\n              <div class=\"types__plate\">\r\n                <div class=\"types__icon\">\r\n                  <img src=\"img/icons/types_2.svg\" alt=\"\">\r\n                </div>\r\n                <h3 class=\"types__name\">\r\n                  Sale\r\n                </h3>\r\n              </div>\r\n              <div class=\"types__plate\">\r\n                <div class=\"types__icon\">\r\n                  <img src=\"img/icons/types_3.svg\" alt=\"\">\r\n                </div>\r\n                <h3 class=\"types__name\">\r\n                  Refinance\r\n                </h3>\r\n              </div>\r\n            </div>\r\n            <div class=\"types__part types__plus flex\">\r\n              <div class=\"types__plate\">\r\n                <div class=\"types__icon\">\r\n                  <img src=\"img/icons/types_4.svg\" alt=\"\">\r\n                </div>\r\n                <h3 class=\"types__name\">\r\n                  Title transfer\r\n                </h3>\r\n                <div class=\"types__tag\">Plus </div>\r\n              </div>\r\n              <div class=\"types__plate\">\r\n                <div class=\"types__icon\">\r\n                  <img src=\"img/icons/types_5.svg\" alt=\"\">\r\n                </div>\r\n                <h3 class=\"types__name\">\r\n                  Assignment\r\n                </h3>\r\n                <div class=\"types__tag\">Plus </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"types__right\">\r\n            <h2 class=\"types__title\">\r\n              <span class=\"red\">i</span>Close has all the file transaction types you need\r\n            </h2>\r\n            <div class=\"types__desc\">\r\n              <p>\r\n                When designing <span class=\"red\">i</span>Close, we wanted to ensure that all real estate transaction types were included and streamlined.\r\n              </p>\r\n            </div>\r\n          </div>\r\n          <div class=\"types__dec1\">\r\n            <img src=\"img/decor/types__dec1.svg\" alt=\"\">\r\n          </div>\r\n          <div class=\"types__dec2\">\r\n            <img src=\"img/decor/types__dec2.svg\" alt=\"\">\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </section>\r\n\r\n    <section class=\"section__client\">\r\n      <div class=\"container\">\r\n        <div class=\"client__content\">\r\n          <h2 class=\"client__title\">\r\n            <span class=\"red\">i</span>Close makes client sign-ups simple\r\n          </h2>\r\n          <div class=\"client__text\">\r\n            <p>\r\n              You can achieve all this and more with one platform and one software, all while saving time and money!\r\n            </p>\r\n          </div>\r\n          <h3 class=\"client__listtitle\">\r\n            Within our platform, you can:\r\n          </h3>\r\n          <ul class=\"client__list flex\">\r\n            <li class=\"client__item\">\r\n              <div class=\"client__num\">\r\n                01.\r\n              </div>\r\n              <div class=\"client__desc\">\r\n                Easily schedule your clients documentation signing\r\n              </div>\r\n            </li>\r\n            <li class=\"client__item\">\r\n              <div class=\"client__num\">\r\n                02.\r\n              </div>\r\n              <div class=\"client__desc\">\r\n                Obtain your client’s documents\r\n              </div>\r\n            </li>\r\n            <li class=\"client__item\">\r\n              <div class=\"client__num\">\r\n                03.\r\n              </div>\r\n              <div class=\"client__desc\">\r\n                Verify your client’s identity\r\n              </div>\r\n            </li>\r\n            <li class=\"client__item\">\r\n              <div class=\"client__num\">\r\n                04.\r\n              </div>\r\n              <div class=\"client__desc\">\r\n                Distribute your clients executed documents\r\n              </div>\r\n            </li>\r\n            <li class=\"client__item\">\r\n              <div class=\"client__num\">\r\n                05.\r\n              </div>\r\n              <div class=\"client__desc\">\r\n                Sign your client’s documents\r\n              </div>\r\n            </li>\r\n            <li class=\"client__item\">\r\n              <div class=\"client__num\">\r\n                06.\r\n              </div>\r\n              <div class=\"client__desc\">\r\n                Screenshare your client’s documents\r\n              </div>\r\n            </li>\r\n          </ul>\r\n          <div class=\"client__dec\">\r\n            <img src=\"img/decor/client__dec.png\" alt=\"\">\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </section>\r\n\r\n    <section class=\"section__sleep\">\r\n      <div class=\"container\">\r\n        <div class=\"sleep__container\">\r\n          <div class=\"sleep__content\">\r\n            <h2 class=\"sleep__title\">\r\n              <span class=\"red\">i</span>Close works while you sleep\r\n            </h2>\r\n            <div class=\"sleep__text\">\r\n              <p>\r\n                <span class=\"red\">i</span>Close can be programmed to follow up on all post closing matters, discharge statements, outstanding client docs etc. Freeing up your time for what is most important to you\r\n              </p>\r\n            </div>\r\n          </div>\r\n          <div class=\"sleep__dec\">\r\n            <img src=\"img/decor/sleep__dec.png\" alt=\"\">\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </section>\r\n\r\n    <section class=\"section__invite\">\r\n      <div class=\"container\">\r\n        <div class=\"invite__container flex\">\r\n          <div class=\"invite__list\">\r\n            <div class=\"invite__item init_1 flex\">\r\n              <div class=\"invite__nym\">1</div>\r\n              <div class=\"invite__strokes\">\r\n                <div class=\"in__stroke\"></div>\r\n                <div class=\"in__stroke\"></div>\r\n              </div>\r\n            </div>\r\n            <div class=\"invite__item init_2 flex\">\r\n              <div class=\"invite__nym\">2</div>\r\n              <div class=\"invite__strokes\">\r\n                <div class=\"in__stroke\"></div>\r\n                <div class=\"in__stroke\"></div>\r\n              </div>\r\n            </div>\r\n            <div class=\"invite__item init_3 flex\">\r\n              <div class=\"invite__nym\">3</div>\r\n              <div class=\"invite__strokes\">\r\n                <div class=\"in__stroke\"></div>\r\n                <div class=\"in__stroke\"></div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"invite__content\">\r\n            <h2 class=\"invite__title\">\r\n              We invite you to try <span class=\"red\">i</span>Close for FREE and see for yourself\r\n            </h2>\r\n            <a href=\"#\" class=\"button invite__button button__red\">\r\n              <span>Start Your Free Trial</span>\r\n            </a>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </section>\r\n\r\n    <section class=\"section__trans\">\r\n      <div class=\"container\">\r\n        <h2 class=\"trans__title\">\r\n          <span class=\"red\">i</span>Close is Transforming Real Estate Transactions\r\n        </h2>\r\n        <div class=\"trans__text\">\r\n          Try the first A.I. Real Estate Conveyancing Software Platform\r\n        </div>\r\n        <ul class=\"trans__list flex\">\r\n          <li class=\"trans__item\">\r\n            <div class=\"trans__img\">\r\n              <img src=\"img/icons/trans_1.png\" alt=\"\">\r\n            </div>\r\n            <h3 class=\"trans__name\">\r\n              Get FREE Software Credits\r\n            </h3>\r\n            <div class=\"trans__desc\">\r\n              <p>\r\n                <span class=\"red\">i</span>Close will give you free transaction software credits so you are not out of pocket for transactions already purchased in our competition’s software\r\n              </p>\r\n            </div>\r\n            <a href=\"#\" class=\"trans__button button button__red\">\r\n              <span>Try iClose for Free!</span>\r\n            </a>\r\n          </li>\r\n          <li class=\"trans__item\">\r\n            <div class=\"trans__img\">\r\n              <img src=\"img/icons/trans_2.svg\" alt=\"\">\r\n            </div>\r\n            <h3 class=\"trans__name\">\r\n              Low Software Charges Per Transaction\r\n            </h3>\r\n            <div class=\"trans__desc\">\r\n              <p>\r\n                <span class=\"red\">i</span>Close only charges $25 plus HST per transaction\r\n              </p>\r\n            </div>\r\n            <a href=\"#\" class=\"trans__button button button__red\">\r\n              <span>Try iClose for Free!</span>\r\n            </a>\r\n          </li>\r\n          <li class=\"trans__item\">\r\n            <div class=\"trans__img\">\r\n              <img src=\"img/icons/trans_3.svg\" alt=\"\">\r\n            </div>\r\n            <h3 class=\"trans__name\">\r\n              Open Multiple File Types\r\n            </h3>\r\n            <div class=\"trans__desc\">\r\n              <p>\r\n                Unlike the competition, you can open multiple file types: Purchase, Sale, Mortgage Refinances\r\n                <br>PLUS: Title Transfer\r\n                <br>& Assignment files\r\n              </p>\r\n            </div>\r\n            <a href=\"#\" class=\"trans__button button button__red\">\r\n              <span>Try iClose for Free!</span>\r\n            </a>\r\n          </li>\r\n          <li class=\"trans__item\">\r\n            <div class=\"trans__img\">\r\n              <img src=\"img/icons/trans_4.svg\" alt=\"\">\r\n            </div>\r\n            <h3 class=\"trans__name\">\r\n              Integrated Document Production\r\n            </h3>\r\n            <div class=\"trans__desc\">\r\n              <p>\r\n                <span class=\"red\">i</span>Close includes integrated document production, a document management system, and a client portal. All included within our low fee\r\n              </p>\r\n            </div>\r\n            <a href=\"#\" class=\"trans__button button button__red\">\r\n              <span>Try iClose for Free!</span>\r\n            </a>\r\n          </li>\r\n          <li class=\"trans__item\">\r\n            <div class=\"trans__img\">\r\n              <img src=\"img/icons/trans_2.png\" alt=\"\">\r\n            </div>\r\n            <h3 class=\"trans__name\">\r\n              Integrated Video Conferencing\r\n            </h3>\r\n            <div class=\"trans__desc\">\r\n              <p>\r\n                <span class=\"red\">i</span>Close’s integrated video conferencing offers original source signatures all within one platform. With <span class=\"red\">i</span>Close, you can sign up clients anywhere in the world\r\n              </p>\r\n            </div>\r\n            <a href=\"#\" class=\"trans__button button button__red\">\r\n              <span>Try iClose for Free!</span>\r\n            </a>\r\n          </li>\r\n          <li class=\"trans__item\">\r\n            <div class=\"trans__img\">\r\n              <img src=\"img/icons/trans_6.svg\" alt=\"\">\r\n            </div>\r\n            <h3 class=\"trans__name\">\r\n              Integrates with Your Software\r\n            </h3>\r\n            <div class=\"trans__desc\">\r\n              <p>\r\n                iClose is set up to directly integrate with First Canadian Title, Chicago Title, Teranet Connect, LLC/MMS, and Verified.Me\r\n              </p>\r\n            </div>\r\n            <a href=\"#\" class=\"trans__button button button__red\">\r\n              <span>Try iClose for Free!</span>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </section>\r\n\r\n    <section class=\"section__comp\">\r\n      <div class=\"container\">\r\n        <div class=\"comp__container\">\r\n          <div class=\"comp__content\">\r\n            <h2 class=\"comp__title\">\r\n              We’re up to 500% Cheaper\r\n              <br>Than the Competition.\r\n              <br>We’re Competitively Priced to Save You Both Time and Money\r\n            </h2>\r\n            <div class=\"comp__text\">\r\n              iClose is only $25 plus HST per transaction which is up to 500% less than the competition.\r\n              <br>iClose  is sympathetic to the cost’s lawyers bear when transitioning from one conveyancing platform to another and accordingly, will be providing FREE software transaction credits to lawyers to offset any costs that lawyers have already spent for files in other platforms.\r\n              <br><br>*visit <span class=\"red\">i</span><span>Close.ca/migration</span> for more details.\r\n            </div>\r\n            <a href=\"#\" class=\"comp__button button button__red\">\r\n              <span>See Our Pricing</span>\r\n            </a>\r\n          </div>\r\n          <div class=\"comp__dec\">\r\n            <img src=\"img/decor/comp__dec.png\" alt=\"\">\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </section>\r\n\r\n    <section class=\"section__feed\">\r\n      <div class=\"container\">\r\n        <h2 class=\"fed__title\">\r\n          <span class=\"red\">i</span>Close Makes Real Estate Lawyers & Clerks Happier\r\n        </h2>\r\n        <div class=\"feed__text\">\r\n          Check out Feedback From our clients\r\n        </div>\r\n        <div class=\"feed__container\">\r\n          <div class=\"feed__decor mouse-parallax-bg\">\r\n            <div class=\"feeddec fd_1\"></div>\r\n            <div class=\"feeddec fd_2\"></div>\r\n            <div class=\"feeddec fd_3\"></div>\r\n            <div class=\"feeddec fd_4\"></div>\r\n            <div class=\"feeddec fd_5\"></div>\r\n            <div class=\"feeddec fd_6\"></div>\r\n            <div class=\"feeddec fd_7\"></div>\r\n          </div>\r\n          <div class=\"feed__reviews\">\r\n            <div class=\"feedrev fr_1\" onclick=\"feedCh($(this))\">\r\n              <div class=\"fedrev__img\">\r\n                <img src=\"img/content/fd_1.jpg\" alt=\"\">\r\n              </div>\r\n              <div class=\"feed__hidden\">\r\n                <div class=\"feedname\">Laurel Manning</div>\r\n                <div class=\"feed__pos\">Senior Lawyer</div>\r\n                <div class=\"feed__rev\">“ I am so thankful we switched to iClose. There system is so intuitive and user friendly that even the senior clerks and lawyers have no issues using it. The best part is the price, there is literally no reason your firm shouldn’t switch to iClose”</div>\r\n              </div>\r\n            </div>\r\n            <div class=\"feedrev fr_2\" onclick=\"feedCh($(this))\">\r\n              <div class=\"fedrev__img\">\r\n                <img src=\"img/content/fd_2.jpg\" alt=\"\">\r\n              </div>\r\n              <div class=\"feed__hidden\">\r\n                <div class=\"feedname\">Laurel Manning</div>\r\n                <div class=\"feed__pos\">Senior Lawyer</div>\r\n                <div class=\"feed__rev\">“ You are so thankful we switched to iClose. There system is so intuitive and user friendly that even the senior clerks and lawyers have no issues using it. The best part is the price, there is literally no reason your firm shouldn’t switch to iClose”</div>\r\n              </div>\r\n            </div>\r\n            <div class=\"feedrev fr_3\" onclick=\"feedCh($(this))\">\r\n              <div class=\"fedrev__img\">\r\n                <img src=\"img/content/fd_3.jpg\" alt=\"\">\r\n              </div>\r\n              <div class=\"feed__hidden\">\r\n                <div class=\"feedname\">Laurel Manning</div>\r\n                <div class=\"feed__pos\">Senior Lawyer</div>\r\n                <div class=\"feed__rev\">“ She is so thankful we switched to iClose. There system is so intuitive and user friendly that even the senior clerks and lawyers have no issues using it. The best part is the price, there is literally no reason your firm shouldn’t switch to iClose”</div>\r\n              </div>\r\n            </div>\r\n            <div class=\"feedrev fr_4 active\" onclick=\"feedCh($(this))\">\r\n              <div class=\"fedrev__img\">\r\n                <img src=\"img/content/fd_4.jpg\" alt=\"\">\r\n              </div>\r\n              <div class=\"feed__hidden\">\r\n                <div class=\"feedname\">Laurel Manning</div>\r\n                <div class=\"feed__pos\">Senior Lawyer</div>\r\n                <div class=\"feed__rev\">“ Thear are so thankful we switched to iClose. There system is so intuitive and user friendly that even the senior clerks and lawyers have no issues using it. The best part is the price, there is literally no reason your firm shouldn’t switch to iClose”</div>\r\n              </div>\r\n            </div>\r\n            <div class=\"feedrev fr_5\" onclick=\"feedCh($(this))\">\r\n              <div class=\"fedrev__img\">\r\n                <img src=\"img/content/fd_5.jpg\" alt=\"\">\r\n              </div>\r\n              <div class=\"feed__hidden\">\r\n                <div class=\"feedname\">Laurel Manning</div>\r\n                <div class=\"feed__pos\">Senior Lawyer</div>\r\n                <div class=\"feed__rev\">“ He is so thankful we switched to iClose. There system is so intuitive and user friendly that even the senior clerks and lawyers have no issues using it. The best part is the price, there is literally no reason your firm shouldn’t switch to iClose”</div>\r\n              </div>\r\n            </div>\r\n            <div class=\"feed__revcint\">\r\n              <div class=\"feed__sircle\"></div>\r\n              <div class=\"feed__mainplace\">\r\n                <div class=\"feed__revtxt\">“ We are so thankful we switched to iClose. There system is so intuitive and user friendly that even the senior clerks and lawyers have no issues using it. The best part is the price, there is literally no reason your firm shouldn’t switch to iClose” </div>\r\n                <div class=\"feed__revname\">Laurel Manning</div>\r\n                <div class=\"feed__revpos\">Senior Lawyer </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"feed__map\">\r\n            <img src=\"img/decor/map.png\" alt=\"\">\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </section>\r\n\r\n  </div>"
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "LiquidPage",
+          "DisplayText": "Integrations",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "LiquidPage": {},
+          "AutoroutePart": {
+            "Path": "integrations",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "TitlePart": {
+            "Title": "Integrations"
+          },
+          "LiquidPart": {
+            "Liquid": "<div class=\"wrapper\">\r\n\r\n  <section class=\"section__integ\">\r\n    <div class=\"container\">\r\n      <div class=\"integ__container\">\r\n        <div class=\"unteg__content\">\r\n          <h1 class=\"integ__title\">\r\n            <span class=\"red\">i</span>Close Integrates With Trusted Partners\r\n          </h1>\r\n          <div class=\"integ__text\">\r\n            <p>\r\n              iClose works seamlessly with other leading software integration partners.\r\n            </p>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"integ__dec\">\r\n      <img class=\"indec\" src=\"iCloseTheme/img/decor/integ__dec.png\" alt=\"\">\r\n      <img class=\"indecmob\" src=\"iCloseTheme/img/decor/integ__decmob.png\" alt=\"\">\r\n    </div>\r\n  </section>\r\n\r\n  <section class=\"section__partnears integ__partnears\">\r\n    <div class=\"container\">\r\n      <div class=\"partnears__content flex\">\r\n        <div class=\"partnears__text\">\r\n          <p>\r\n            Our Trusted Integration & Membership Partners\r\n          </p>\r\n        </div>\r\n        <ul class=\"partnears__logos flex\">\r\n          <li>\r\n            <a href=\"#\"><img src=\"iCloseTheme/img/content/part_1.svg\" alt=\"\"></a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><img src=\"iCloseTheme/img/content/part_5.svg\" alt=\"\"></a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><img src=\"iCloseTheme/img/content/part_2.svg\" alt=\"\"></a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><img src=\"iCloseTheme/img/content/part_6.svg\" alt=\"\"></a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><img src=\"iCloseTheme/img/content/part_3.svg\" alt=\"\"></a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><img src=\"iCloseTheme/img/content/part_7.svg\" alt=\"\"></a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><img src=\"iCloseTheme/img/content/part_4.svg\" alt=\"\"></a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n  </section>\r\n\r\n  <section class=\"section__orbit\">\r\n    <div class=\"container\">\r\n      <div class=\"orbit__cintainer\">\r\n        <div class=\"orbit__deccont\">\r\n          <div class=\"orbit__sirkle orbit__cir1\">\r\n            <div class=\"planet_1\">\r\n              <img src=\"iCloseTheme/img/decor/pl_1.svg\" alt=\"\">\r\n            </div>\r\n            <div class=\"planet_2\">\r\n              <img src=\"iCloseTheme/img/decor/pl_2.svg\" alt=\"\">\r\n            </div>\r\n            <div class=\"planet_3\">\r\n              <img src=\"iCloseTheme/img/decor/pl_3.svg\" alt=\"\">\r\n            </div>\r\n          </div>\r\n          <div class=\"orbit__sirkle orbit__cir2\"></div>\r\n          <div class=\"orbit__sirkle orbit__cir3\">\r\n            <div class=\"planet_4\">\r\n              <img src=\"iCloseTheme/img/decor/pl_4.svg\" alt=\"\">\r\n            </div>\r\n            <div class=\"planet_5\">\r\n              <img src=\"iCloseTheme/img/decor/pl_5.svg\" alt=\"\">\r\n            </div>\r\n          </div>\r\n          <div class=\"orbit__sirkle orbit__cir4\">\r\n            <div class=\"planet_6\">\r\n              <img src=\"iCloseTheme/img/decor/pl_6.svg\" alt=\"\">\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"orbit__buttons\">\r\n          <div onclick=\"orbitChange($(this))\" class=\"orbit__button orbutton__1\">\r\n            <div class=\"orbit__bimg\">\r\n              <img src=\"iCloseTheme/img/content/part_1.svg\" alt=\"\">\r\n            </div>\r\n            <div class=\"orbit__hidden\">\r\n              <div class=\"orvit__name\">Taranet</div>\r\n              <div class=\"orbit__desc\">Offering Title Insurance </div>\r\n            </div>\r\n          </div>\r\n          <div onclick=\"orbitChange($(this))\" class=\"orbit__button orbutton__2\">\r\n            <div class=\"orbit__bimg\">\r\n              <img src=\"iCloseTheme/img/content/part_2.svg\" alt=\"\">\r\n            </div>\r\n            <div class=\"orbit__hidden\">\r\n              <div class=\"orvit__name\">LLC</div>\r\n              <div class=\"orbit__desc\">Offering Title Insurance </div>\r\n            </div>\r\n          </div>\r\n          <div onclick=\"orbitChange($(this))\" class=\"orbit__button orbutton__3 orbitActive\">\r\n            <div class=\"orbit__bimg\">\r\n              <img src=\"iCloseTheme/img/content/part_3.svg\" alt=\"\">\r\n            </div>\r\n            <div class=\"orbit__hidden\">\r\n              <div class=\"orvit__name\">FCT</div>\r\n              <div class=\"orbit__desc\">Offering Title Insurance </div>\r\n            </div>\r\n          </div>\r\n          <div onclick=\"orbitChange($(this))\" class=\"orbit__button orbutton__4\">\r\n            <div class=\"orbit__bimg\">\r\n              <img src=\"iCloseTheme/img/content/part_4.svg\" alt=\"\">\r\n            </div>\r\n            <div class=\"orbit__hidden\">\r\n              <div class=\"orvit__name\">CHUCAGO TITLE <br>INSURANCE <br>COMPANY</div>\r\n              <div class=\"orbit__desc\">Offering Title Insurance </div>\r\n            </div>\r\n          </div>\r\n          <div onclick=\"orbitChange($(this))\" class=\"orbit__button orbutton__5\">\r\n            <div class=\"orbit__bimg\">\r\n              <img src=\"iCloseTheme/img/content/part_5.svg\" alt=\"\">\r\n            </div>\r\n            <div class=\"orbit__hidden\">\r\n              <div class=\"orvit__name\">FINANCICAL <br>DATA EXCHANGE</div>\r\n              <div class=\"orbit__desc\">Offering Title Insurance </div>\r\n            </div>\r\n          </div>\r\n          <div onclick=\"orbitChange($(this))\" class=\"orbit__button orbutton__6\">\r\n            <div class=\"orbit__bimg\">\r\n              <img src=\"iCloseTheme/img/content/part_6.svg\" alt=\"\">\r\n            </div>\r\n            <div class=\"orbit__hidden\">\r\n              <div class=\"orvit__name\">VERYFIED <br>ME</div>\r\n              <div class=\"orbit__desc\">Offering Title Insurance </div>\r\n            </div>\r\n          </div>\r\n          <div onclick=\"orbitChange($(this))\" class=\"orbit__button orbutton__7\">\r\n            <div class=\"orbit__bimg\">\r\n              <img src=\"iCloseTheme/img/content/part_7.svg\" alt=\"\">\r\n            </div>\r\n            <div class=\"orbit__hidden\">\r\n              <div class=\"orvit__name\">DIACC</div>\r\n              <div class=\"orbit__desc\">Offering Title Insurance </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"orbit__pastcont\">\r\n          <div class=\"orbitpaste__inner\">\r\n            <div class=\"orbit__pname\">\r\n              First <br>Canadian <br>Title\r\n            </div>\r\n            <div class=\"orbit__ptext\">\r\n              Offering Title Insurance\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"orbit__bg\"></div>\r\n      </div>\r\n    </div>\r\n  </section>\r\n\r\n</div>"
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "RawHtml",
+          "DisplayText": "Footer",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "LayerMetadata": {
+            "Layer": "Always",
+            "Zone": "Footer",
+            "RenderTitle": false,
+            "Position": 10
+          },
+          "RawHtml": {
+            "Content": {
               "Html": "[file:text('Snippets/footer.html')]"
             }
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "RawHtml",
+          "DisplayText": "Header",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "LayerMetadata": {
+            "Layer": "Always",
+            "Zone": "Header",
+            "RenderTitle": false,
+            "Position": 10
+          },
+          "RawHtml": {
+            "Content": {
+              "Html": "[file:text('Snippets/header.html')]"
+            }
+          }
+        },
+        {
+          "ContentItemId": "[js:uuid()]",
+          "ContentItemVersionId": "[js:uuid()]",
+          "ContentType": "Menu",
+          "DisplayText": "Main Menu",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "MenuPart": {},
+          "TitlePart": {
+            "Title": "Main Menu"
+          },
+          "MenuItemsListPart": {
+            "MenuItems": [
+              {
+                "ContentType": "LinkMenuItem",
+                "ContentItemId": "[js:uuid()]",
+                "DisplayText": "Integrations",
+                "LinkMenuItemPart": {
+                  "Name": "Integrations",
+                  "Url": "~/integrations"
+                }
+              },
+              {
+                "ContentType": "LinkMenuItem",
+                "ContentItemId": "[js:uuid()]",
+                "DisplayText": "Portfolio",
+                "LinkMenuItemPart": {
+                  "Name": "About us",
+                  "Url": "~/about"
+                }
+              },
+              {
+                "ContentType": "LinkMenuItem",
+                "ContentItemId": "[js:uuid()]",
+                "DisplayText": "About",
+                "LinkMenuItemPart": {
+                  "Name": "FAQ",
+                  "Url": "~/fAQ"
+                }
+              },
+              {
+                "ContentType": "LinkMenuItem",
+                "ContentItemId": "[js:uuid()]",
+                "DisplayText": "Team",
+                "LinkMenuItemPart": {
+                  "Name": "Pricing",
+                  "Url": "~/pricing"
+                }
+              },
+              {
+                "ContentType": "LinkMenuItem",
+                "ContentItemId": "[js:uuid()]",
+                "DisplayText": "Contact",
+                "LinkMenuItemPart": {
+                  "Name": "Contact",
+                  "Url": "~/contact"
+                }
+              }
+            ]
+          },
+          "AliasPart": {
+            "Alias": "main-menu"
           }
         }
       ]
@@ -879,626 +738,6 @@
             ]
           },
           "Description": "The widgets in this layer are only displayed on the homepage."
-        }
-      ]
-    },
-    {
-      "name": "Content",
-      "data": [
-        {
-          "ContentItemId": "[js:uuid()]",
-          "ContentItemVersionId": "[js:uuid()]",
-          "ContentType": "Menu",
-          "DisplayText": "Main Menu",
-          "Latest": true,
-          "Published": true,
-          "Owner": "[js: parameters('AdminUserId')]",
-          "Author": "[js: parameters('AdminUsername')]",
-          "MenuPart": {},
-          "TitlePart": {
-            "Title": "Main Menu"
-          },
-          "MenuItemsListPart": {
-            "MenuItems": [
-              {
-                "ContentType": "LinkMenuItem",
-                "ContentItemId": "[js:uuid()]",
-                "DisplayText": "Services",
-                "LinkMenuItemPart": {
-                  "Name": "Services",
-                  "Url": "~/#services"
-                }
-              },
-              {
-                "ContentType": "LinkMenuItem",
-                "ContentItemId": "[js:uuid()]",
-                "DisplayText": "Portfolio",
-                "LinkMenuItemPart": {
-                  "Name": "Portfolio",
-                  "Url": "~/#portfolio"
-                }
-              },
-              {
-                "ContentType": "LinkMenuItem",
-                "ContentItemId": "[js:uuid()]",
-                "DisplayText": "About",
-                "LinkMenuItemPart": {
-                  "Name": "About",
-                  "Url": "~/#about"
-                }
-              },
-              {
-                "ContentType": "LinkMenuItem",
-                "ContentItemId": "[js:uuid()]",
-                "DisplayText": "Team",
-                "LinkMenuItemPart": {
-                  "Name": "Team",
-                  "Url": "~/#team"
-                }
-              },
-              {
-                "ContentType": "LinkMenuItem",
-                "ContentItemId": "[js:uuid()]",
-                "DisplayText": "Contact",
-                "LinkMenuItemPart": {
-                  "Name": "Contact",
-                  "Url": "~/#contact"
-                }
-              }
-            ]
-          },
-          "AliasPart": {
-            "Alias": "main-menu"
-          }
-        },
-        {
-          "ContentItemId": "[js:uuid()]",
-          "ContentItemVersionId": "[js:uuid()]",
-          "ContentType": "LandingPage",
-          "DisplayText": "[js: parameters('SiteName')]",
-          "Latest": true,
-          "Published": true,
-          "Owner": "[js: parameters('AdminUserId')]",
-          "Author": "[js: parameters('AdminUsername')]",
-          "LandingPage": {},
-          "AutoroutePart": {
-            "Path": "home-page",
-            "SetHomepage": true
-          },
-          "TitlePart": {
-            "Title": "[js: parameters('SiteName')]"
-          },
-          "Services": {
-            "ContentItems": [
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Service",
-                "DisplayText": "E-Commerce",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Service": {
-                  "IconClass": {
-                    "Text": "fa-shopping-cart"
-                  }
-                },
-                "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-                },
-                "TitlePart": {
-                  "Title": "E-Commerce"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Service",
-                "DisplayText": "Responsive Design",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Service": {
-                  "IconClass": {
-                    "Text": "fa-laptop"
-                  }
-                },
-                "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-                },
-                "TitlePart": {
-                  "Title": "Responsive Design"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Service",
-                "DisplayText": "Web Security",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Service": {
-                  "IconClass": {
-                    "Text": "fa-lock"
-                  }
-                },
-                "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-                },
-                "TitlePart": {
-                  "Title": "Web Security"
-                }
-              }
-            ]
-          },
-          "Portfolio": {
-            "ContentItems": [
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Project",
-                "DisplayText": "Threads",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Project": {
-                  "Image": {
-                    "Paths": [
-                      "/portfolio/1.jpg"
-                    ]
-                  },
-                  "Category": {
-                    "Text": "Illustrations"
-                  }
-                },
-                "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!"
-                },
-                "TitlePart": {
-                  "Title": "Threads"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Project",
-                "DisplayText": "Explore",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Project": {
-                  "Image": {
-                    "Paths": [
-                      "/portfolio/2.jpg"
-                    ]
-                  },
-                  "Category": {
-                    "Text": "Graphic Design"
-                  }
-                },
-                "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!"
-                },
-                "TitlePart": {
-                  "Title": "Explore"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Project",
-                "DisplayText": "Finish",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Project": {
-                  "Image": {
-                    "Paths": [
-                      "/portfolio/3.jpg"
-                    ]
-                  },
-                  "Category": {
-                    "Text": "Identity"
-                  }
-                },
-                "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!"
-                },
-                "TitlePart": {
-                  "Title": "Finish"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Project",
-                "DisplayText": "Lines",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Project": {
-                  "Image": {
-                    "Paths": [
-                      "/portfolio/4.jpg"
-                    ]
-                  },
-                  "Category": {
-                    "Text": "Branding"
-                  }
-                },
-                "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!"
-                },
-                "TitlePart": {
-                  "Title": "Lines"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Project",
-                "DisplayText": "Southwest",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Project": {
-                  "Image": {
-                    "Paths": [
-                      "/portfolio/5.jpg"
-                    ]
-                  },
-                  "Category": {
-                    "Text": "Web Design"
-                  }
-                },
-                "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!"
-                },
-                "TitlePart": {
-                  "Title": "Southwest"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Project",
-                "DisplayText": "Window",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Project": {
-                  "Image": {
-                    "Paths": [
-                      "/portfolio/6.jpg"
-                    ]
-                  },
-                  "Category": {
-                    "Text": "Photography"
-                  }
-                },
-                "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!"
-                },
-                "TitlePart": {
-                  "Title": "Window"
-                }
-              }
-            ]
-          },
-          "About": {
-            "ContentItems": [
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Milestone",
-                "DisplayText": "Our Humble Beginnings",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Milestone": {
-                  "Date": {
-                    "Text": "2009-2011"
-                  },
-                  "Image": {
-                    "Paths": [
-                      "/about/1.jpg"
-                    ]
-                  }
-                },
-                "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
-                },
-                "TitlePart": {
-                  "Title": "Our Humble Beginnings"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Milestone",
-                "DisplayText": "An Agency is Born",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Milestone": {
-                  "Date": {
-                    "Text": "March 2011"
-                  },
-                  "Image": {
-                    "Paths": [
-                      "/about/2.jpg"
-                    ]
-                  }
-                },
-                "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!\r\n"
-                },
-                "TitlePart": {
-                  "Title": "An Agency is Born"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Milestone",
-                "DisplayText": "Transition to Full Service",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Milestone": {
-                  "Date": {
-                    "Text": "December 2015"
-                  },
-                  "Image": {
-                    "Paths": [
-                      "/about/3.jpg"
-                    ]
-                  }
-                },
-                "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
-                },
-                "TitlePart": {
-                  "Title": "Transition to Full Service"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Milestone",
-                "DisplayText": "Phase Two Expansion",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Milestone": {
-                  "Date": {
-                    "Text": "July 2020"
-                  },
-                  "Image": {
-                    "Paths": [
-                      "/about/4.jpg"
-                    ]
-                  }
-                },
-                "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!\r\n"
-                },
-                "TitlePart": {
-                  "Title": "Phase Two Expansion"
-                }
-              }
-            ]
-          },
-          "Team": {
-            "ContentItems": [
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "TeamMember",
-                "DisplayText": "Parveen Anand",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "TeamMember": {
-                  "Occupation": {
-                    "Text": "Lead Designer"
-                  },
-                  "Picture": {
-                    "Paths": [
-                      "/team/1.jpg"
-                    ]
-                  },
-                  "Twitter": {
-                    "Text": "@"
-                  },
-                  "Facebook": {
-                    "Text": "@"
-                  },
-                  "LinkedIn": {
-                    "Text": "@"
-                  }
-                },
-                "TitlePart": {
-                  "Title": "Parveen Anand"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "TeamMember",
-                "DisplayText": "Diana Petersen",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "TeamMember": {
-                  "Occupation": {
-                    "Text": "Lead Marketer"
-                  },
-                  "Picture": {
-                    "Paths": [
-                      "/team/2.jpg"
-                    ]
-                  },
-                  "Twitter": {
-                    "Text": "@"
-                  },
-                  "Facebook": {
-                    "Text": "@"
-                  },
-                  "LinkedIn": {
-                    "Text": "@"
-                  }
-                },
-                "TitlePart": {
-                  "Title": "Diana Petersen"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "TeamMember",
-                "DisplayText": "Larry Parker",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "TeamMember": {
-                  "Occupation": {
-                    "Text": "Lead Developer"
-                  },
-                  "Picture": {
-                    "Paths": [
-                      "/team/3.jpg"
-                    ]
-                  },
-                  "Twitter": {
-                    "Text": "@"
-                  },
-                  "Facebook": {
-                    "Text": "@"
-                  },
-                  "LinkedIn": {
-                    "Text": "@"
-                  }
-                },
-                "TitlePart": {
-                  "Title": "Larry Parker"
-                }
-              }
-            ]
-          },
-          "Clients": {
-            "ContentItems": [
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Client",
-                "DisplayText": "Microsoft",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Client": {
-                  "Logo": {
-                    "Paths": [
-                      "/logos/microsoft.svg"
-                    ]
-                  },
-                  "Url": {
-                    "Text": "#"
-                  }
-                },
-                "TitlePart": {
-                  "Title": "Microsoft"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Client",
-                "DisplayText": "Google",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Client": {
-                  "Logo": {
-                    "Paths": [
-                      "/logos/google.svg"
-                    ]
-                  },
-                  "Url": {
-                    "Text": "#"
-                  }
-                },
-                "TitlePart": {
-                  "Title": "Google"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Client",
-                "DisplayText": "Facebook",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Client": {
-                  "Logo": {
-                    "Paths": [
-                      "/logos/facebook.svg"
-                    ]
-                  },
-                  "Url": {
-                    "Text": "#"
-                  }
-                },
-                "TitlePart": {
-                  "Title": "Facebook"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Client",
-                "DisplayText": "IBM",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Client": {
-                  "Logo": {
-                    "Paths": [
-                      "/logos/ibm.svg"
-                    ]
-                  },
-                  "Url": {
-                    "Text": "#"
-                  }
-                },
-                "TitlePart": {
-                  "Title": "IBM"
-                }
-              }
-            ]
-          }
         }
       ]
     },

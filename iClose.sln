@@ -14,6 +14,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iCloseTheme", "iCloseTheme\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Themes", "Themes", "{C7870890-8632-423E-A314-C3394894AC66}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iCloseAdmin", "iCloseAdmin\iCloseAdmin.csproj", "{581FFD4C-4A28-46BB-8997-B485F27C9C0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,12 +30,17 @@ Global
 		{1DD774C8-CD66-46E0-9DCF-C39BC48A10F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DD774C8-CD66-46E0-9DCF-C39BC48A10F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DD774C8-CD66-46E0-9DCF-C39BC48A10F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{581FFD4C-4A28-46BB-8997-B485F27C9C0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{581FFD4C-4A28-46BB-8997-B485F27C9C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{581FFD4C-4A28-46BB-8997-B485F27C9C0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{581FFD4C-4A28-46BB-8997-B485F27C9C0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1DD774C8-CD66-46E0-9DCF-C39BC48A10F3} = {C7870890-8632-423E-A314-C3394894AC66}
+		{581FFD4C-4A28-46BB-8997-B485F27C9C0F} = {C7870890-8632-423E-A314-C3394894AC66}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {418F754B-810B-4CDE-99A5-C0D2257B2E78}

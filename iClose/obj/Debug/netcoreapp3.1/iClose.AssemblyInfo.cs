@@ -86,6 +86,7 @@ using System.Reflection;
 [assembly: OrchardCore.Modules.Manifest.ModuleNameAttribute("OrchardCore.Apis.GraphQL")]
 [assembly: OrchardCore.Modules.Manifest.ModuleNameAttribute("OrchardCore.Alias")]
 [assembly: OrchardCore.Modules.Manifest.ModuleNameAttribute("OrchardCore.AdminMenu")]
+[assembly: OrchardCore.Modules.Manifest.ModuleNameAttribute("iCloseAdmin")]
 [assembly: OrchardCore.Modules.Manifest.ModuleNameAttribute("iCloseTheme")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("iClose")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]

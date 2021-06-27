@@ -6814,6 +6814,28 @@
           "lib/netstandard2.0/YesSql.Provider.SqlServer.dll": {}
         }
       },
+      "iCloseAdmin/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "OrchardCore.Admin": "1.0.0-rc2-15734",
+          "OrchardCore.ContentManagement.Abstractions": "1.0.0-rc2-15734",
+          "OrchardCore.DisplayManagement": "1.0.0-rc2-15734",
+          "OrchardCore.Html": "1.0.0-rc2-15734",
+          "OrchardCore.ResourceManagement": "1.0.0-rc2-15734",
+          "OrchardCore.Theme.Targets": "1.0.0-rc2-15734",
+          "OrchardCore.Themes": "1.0.0-rc2-15734"
+        },
+        "compile": {
+          "bin/placeholder/iCloseAdmin.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/iCloseAdmin.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "iCloseTheme/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -17511,6 +17533,11 @@
         "yessql.provider.sqlserver.nuspec"
       ]
     },
+    "iCloseAdmin/1.0.0": {
+      "type": "project",
+      "path": "../iCloseAdmin/iCloseAdmin.csproj",
+      "msbuildProject": "../iCloseAdmin/iCloseAdmin.csproj"
+    },
     "iCloseTheme/1.0.0": {
       "type": "project",
       "path": "../iCloseTheme/iCloseTheme.csproj",
@@ -17521,6 +17548,7 @@
     ".NETCoreApp,Version=v3.1": [
       "OrchardCore.Application.Cms.Targets >= 1.0.0-rc2-15734",
       "OrchardCore.Logging.NLog >= 1.0.0-rc2-15734",
+      "iCloseAdmin >= 1.0.0",
       "iCloseTheme >= 1.0.0"
     ]
   },
@@ -17560,6 +17588,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+            "C:\\Users\\Kamal\\source\\repos\\iClose\\iCloseAdmin\\iCloseAdmin.csproj": {
+              "projectPath": "C:\\Users\\Kamal\\source\\repos\\iClose\\iCloseAdmin\\iCloseAdmin.csproj"
+            },
             "C:\\Users\\Kamal\\source\\repos\\iClose\\iCloseTheme\\iCloseTheme.csproj": {
               "projectPath": "C:\\Users\\Kamal\\source\\repos\\iClose\\iCloseTheme\\iCloseTheme.csproj"
             }

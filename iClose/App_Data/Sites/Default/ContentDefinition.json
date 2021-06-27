@@ -164,24 +164,23 @@
       ]
     },
     {
-      "Name": "LandingPage",
-      "DisplayName": "Landing Page",
+      "Name": "LiquidPage",
+      "DisplayName": "Liquid Page",
       "Settings": {
         "ContentTypeSettings": {
           "Creatable": true,
           "Draftable": true,
           "Versionable": true,
-          "Listable": true,
-          "Securable": true
+          "Listable": true
         }
       },
       "ContentTypePartDefinitionRecords": [
         {
-          "PartName": "LandingPage",
-          "Name": "LandingPage",
+          "PartName": "LiquidPage",
+          "Name": "LiquidPage",
           "Settings": {
             "ContentTypePartSettings": {
-              "Position": "8"
+              "Position": "2"
             }
           }
         },
@@ -200,6 +199,15 @@
           }
         },
         {
+          "PartName": "LiquidPart",
+          "Name": "LiquidPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        },
+        {
           "PartName": "TitlePart",
           "Name": "TitlePart",
           "Settings": {
@@ -207,228 +215,61 @@
               "Position": "0"
             }
           }
+        }
+      ]
+    },
+    {
+      "Name": "LivePage",
+      "DisplayName": "Live Page",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
         },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
         {
-          "PartName": "BagPart",
-          "Name": "Services",
+          "PartName": "LivePage",
+          "Name": "LivePage",
           "Settings": {
             "ContentTypePartSettings": {
-              "DisplayName": "Services",
-              "Description": "Provides a collection behavior for your content item.",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "AutoroutePart",
+          "Name": "AutoroutePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            },
+            "AutoroutePartSettings": {
+              "AllowCustomPath": true,
+              "ShowHomepageOption": true,
+              "AllowUpdatePath": true
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
               "Position": "3"
             },
-            "BagPartSettings": {
-              "ContainedContentTypes": [
-                "Service"
-              ]
-            }
-          }
-        },
-        {
-          "PartName": "BagPart",
-          "Name": "Portfolio",
-          "Settings": {
-            "BagPartSettings": {
-              "ContainedContentTypes": [
-                "Project"
-              ]
+            "HtmlBodyPartSettings": {
+              "SanitizeHtml": false
             },
-            "ContentTypePartSettings": {
-              "DisplayName": "Portfolio",
-              "Description": "Provides a collection behavior for your content item.",
-              "Position": "4"
-            }
-          }
-        },
-        {
-          "PartName": "BagPart",
-          "Name": "About",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "DisplayName": "About",
-              "Description": "A collection of milestones",
-              "Position": "5"
+            "HtmlBodyPartTrumbowygEditorSettings": {
+              "Options": "{\r\n    autogrow: true,\r\n    btns: [\r\n        [\"viewHTML\"],\r\n        [\"undo\", \"redo\"],\r\n        [\"formatting\"],\r\n        [\"strong\", \"em\", \"del\"],\r\n        [\"foreColor\", \"backColor\"],\r\n        [\"superscript\", \"subscript\"],\r\n        [\"link\"],\r\n        [\"insertShortcode\"],\r\n        [\"image\"],\r\n        [\"align\"],\r\n        [\"unorderedList\", \"orderedList\"],\r\n        [\"horizontalRule\"],\r\n        [\"removeformat\"],\r\n        [\"fullscreen\"]\r\n    ],\r\n    btnsDef: {\r\n        align: {\r\n            dropdown: [\"justifyLeft\", \"justifyCenter\", \"justifyRight\", \"justifyFull\"],\r\n            ico: \"justifyLeft\"\r\n        },\r\n        image: {\r\n            dropdown: [\"insertImage\", \"base64\", \"noembed\"],\r\n            ico: \"insertImage\"\r\n        }\r\n    }\r\n}"
             },
-            "BagPartSettings": {
-              "ContainedContentTypes": [
-                "Milestone"
-              ]
-            }
-          }
-        },
-        {
-          "PartName": "BagPart",
-          "Name": "Team",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "DisplayName": "Team",
-              "Description": "Team members",
-              "Position": "6"
-            },
-            "BagPartSettings": {
-              "ContainedContentTypes": [
-                "TeamMember"
-              ]
-            }
-          }
-        },
-        {
-          "PartName": "BagPart",
-          "Name": "Clients",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "DisplayName": "Clients",
-              "Description": "Provides a collection behavior for your content item.",
-              "Position": "7"
-            },
-            "BagPartSettings": {
-              "ContainedContentTypes": [
-                "Client"
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
-      "Name": "Service",
-      "DisplayName": "Service",
-      "Settings": {},
-      "ContentTypePartDefinitionRecords": [
-        {
-          "PartName": "Service",
-          "Name": "Service",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "Position": "2"
-            }
-          }
-        },
-        {
-          "PartName": "HtmlBodyPart",
-          "Name": "HtmlBodyPart",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "Position": "1"
-            }
-          }
-        },
-        {
-          "PartName": "TitlePart",
-          "Name": "TitlePart",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "Position": "0"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "Name": "Project",
-      "DisplayName": "Project",
-      "Settings": {},
-      "ContentTypePartDefinitionRecords": [
-        {
-          "PartName": "Project",
-          "Name": "Project",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "Position": "2"
-            }
-          }
-        },
-        {
-          "PartName": "HtmlBodyPart",
-          "Name": "HtmlBodyPart",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "Position": "1"
-            }
-          }
-        },
-        {
-          "PartName": "TitlePart",
-          "Name": "TitlePart",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "Position": "0"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "Name": "Milestone",
-      "DisplayName": "Milestone",
-      "Settings": {},
-      "ContentTypePartDefinitionRecords": [
-        {
-          "PartName": "Milestone",
-          "Name": "Milestone",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "Position": "0"
-            }
-          }
-        },
-        {
-          "PartName": "HtmlBodyPart",
-          "Name": "HtmlBodyPart",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "Position": "2"
-            }
-          }
-        },
-        {
-          "PartName": "TitlePart",
-          "Name": "TitlePart",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "Position": "1"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "Name": "TeamMember",
-      "DisplayName": "Team Member",
-      "Settings": {},
-      "ContentTypePartDefinitionRecords": [
-        {
-          "PartName": "TeamMember",
-          "Name": "TeamMember",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "Position": "1"
-            }
-          }
-        },
-        {
-          "PartName": "TitlePart",
-          "Name": "TitlePart",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "Position": "0"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "Name": "Client",
-      "DisplayName": "Client",
-      "Settings": {},
-      "ContentTypePartDefinitionRecords": [
-        {
-          "PartName": "Client",
-          "Name": "Client",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "Position": "1"
-            }
+            "ContentIndexSettings": {}
           }
         },
         {
@@ -745,187 +586,6 @@
       ]
     },
     {
-      "Name": "Service",
-      "Settings": {},
-      "ContentPartFieldDefinitionRecords": [
-        {
-          "FieldName": "TextField",
-          "Name": "IconClass",
-          "Settings": {
-            "ContentPartFieldSettings": {
-              "DisplayName": "Icon Class",
-              "Position": "0"
-            },
-            "TextFieldSettings": {
-              "Hint": "The icon css class from font-awesome. e.g., fa-laptop, fa-shopping-cart, fa-lock"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "Name": "Project",
-      "Settings": {},
-      "ContentPartFieldDefinitionRecords": [
-        {
-          "FieldName": "MediaField",
-          "Name": "Image",
-          "Settings": {
-            "ContentPartFieldSettings": {
-              "DisplayName": "Image",
-              "Position": "1"
-            },
-            "MediaFieldSettings": {
-              "Required": true,
-              "Multiple": false
-            }
-          }
-        },
-        {
-          "FieldName": "TextField",
-          "Name": "Category",
-          "Settings": {
-            "ContentPartFieldSettings": {
-              "DisplayName": "Category",
-              "Position": "0"
-            },
-            "TextFieldSettings": {
-              "Hint": "The category that is displayed below the title"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "Name": "Milestone",
-      "Settings": {},
-      "ContentPartFieldDefinitionRecords": [
-        {
-          "FieldName": "TextField",
-          "Name": "Date",
-          "Settings": {
-            "ContentPartFieldSettings": {
-              "DisplayName": "Date",
-              "Position": "0"
-            }
-          }
-        },
-        {
-          "FieldName": "MediaField",
-          "Name": "Image",
-          "Settings": {
-            "ContentPartFieldSettings": {
-              "DisplayName": "Image",
-              "Position": "1"
-            },
-            "MediaFieldSettings": {
-              "Required": true,
-              "Multiple": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "Name": "TeamMember",
-      "Settings": {},
-      "ContentPartFieldDefinitionRecords": [
-        {
-          "FieldName": "TextField",
-          "Name": "Occupation",
-          "Settings": {
-            "ContentPartFieldSettings": {
-              "DisplayName": "Occupation",
-              "Position": "0"
-            }
-          }
-        },
-        {
-          "FieldName": "MediaField",
-          "Name": "Picture",
-          "Settings": {
-            "ContentPartFieldSettings": {
-              "DisplayName": "Picture",
-              "Position": "1"
-            },
-            "MediaFieldSettings": {
-              "Required": true,
-              "Multiple": false
-            }
-          }
-        },
-        {
-          "FieldName": "TextField",
-          "Name": "Twitter",
-          "Settings": {
-            "ContentPartFieldSettings": {
-              "DisplayName": "Twitter",
-              "Position": "2"
-            },
-            "TextFieldSettings": {
-              "Hint": "Twitter handle, e.g. @BillGates"
-            }
-          }
-        },
-        {
-          "FieldName": "TextField",
-          "Name": "Facebook",
-          "Settings": {
-            "ContentPartFieldSettings": {
-              "DisplayName": "Facebook",
-              "Position": "3"
-            },
-            "TextFieldSettings": {
-              "Hint": "Facebook handle"
-            }
-          }
-        },
-        {
-          "FieldName": "TextField",
-          "Name": "LinkedIn",
-          "Settings": {
-            "ContentPartFieldSettings": {
-              "DisplayName": "LinkedIn",
-              "Position": "4"
-            },
-            "TextFieldSettings": {
-              "Hint": "LinkedIn handle"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "Name": "Client",
-      "Settings": {},
-      "ContentPartFieldDefinitionRecords": [
-        {
-          "FieldName": "MediaField",
-          "Name": "Logo",
-          "Settings": {
-            "ContentPartFieldSettings": {
-              "DisplayName": "Logo",
-              "Position": "0"
-            },
-            "MediaFieldSettings": {
-              "Required": true,
-              "Multiple": false
-            }
-          }
-        },
-        {
-          "FieldName": "TextField",
-          "Name": "Url",
-          "Settings": {
-            "ContentPartFieldSettings": {
-              "DisplayName": "Url",
-              "Position": "1"
-            }
-          }
-        }
-      ]
-    },
-    {
       "Name": "RawHtml",
       "Settings": {},
       "ContentPartFieldDefinitionRecords": [
@@ -1012,7 +672,12 @@
           }
         }
       ]
+    },
+    {
+      "Name": "LivePage",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": []
     }
   ],
-  "Identifier": "4rbzgwh6hpahryqt68q1f362nk"
+  "Identifier": "4625ynednsjtvsefxqq8kek7d9"
 }

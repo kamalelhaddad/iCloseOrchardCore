@@ -659,3 +659,7 @@ C:\Users\Kamal\source\repos\iClose\iClose\obj\Debug\netcoreapp3.1\iClose.genrunt
 C:\Users\Kamal\source\repos\iClose\iClose\bin\Debug\netcoreapp3.1\iCloseTheme.dll
 C:\Users\Kamal\source\repos\iClose\iClose\bin\Debug\netcoreapp3.1\iCloseTheme.pdb
 C:\Users\Kamal\source\repos\iClose\iClose\obj\Debug\netcoreapp3.1\iClose.csprojAssemblyReference.cache
+C:\Users\Kamal\source\repos\iClose\iClose\bin\Debug\netcoreapp3.1\iCloseAdmin.Views.dll
+C:\Users\Kamal\source\repos\iClose\iClose\bin\Debug\netcoreapp3.1\iCloseAdmin.Views.pdb
+C:\Users\Kamal\source\repos\iClose\iClose\bin\Debug\netcoreapp3.1\iCloseAdmin.dll
+C:\Users\Kamal\source\repos\iClose\iClose\bin\Debug\netcoreapp3.1\iCloseAdmin.pdb

@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\admin\**" />
+    <EmbeddedResource Remove="wwwroot\admin\**" />
+    <None Remove="wwwroot\admin\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ResourceMinfest.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\AdminDashboard.cshtml" />
+    <EmbeddedResource Remove="Views\Content.SummaryAdmin.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OrchardCore.Admin" Version="1.0.0-rc2-15734" />
+    <PackageReference Include="OrchardCore.ContentManagement.Abstractions" Version="1.0.0-rc2-15734" />
+    <PackageReference Include="OrchardCore.Html" Version="1.0.0-rc2-15734" />
+    <PackageReference Include="OrchardCore.Theme.Targets" Version="1.0.0-rc2-15734" />
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.0.0-rc2-15734" />
+    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.0.0-rc2-15734" />
+    <PackageReference Include="OrchardCore.Themes" Version="1.0.0-rc2-15734" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+</Project>

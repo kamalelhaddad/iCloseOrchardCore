@@ -178,7 +178,18 @@
     <script src="/iCloseTheme/js/vendor.min.js"></script>
     <script src="/iCloseTheme/js/custom.min.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
+    {% script at:"Foot", src:"~/OrchardCore.Menu/Scripts/activate-links.min.js", debug_src:"~/OrchardCore.Menu/Scripts/activate-links.js" %}
+
     {% resources type: "FootScript" %}
+    <resources type="Footer" />
+    <script>
+        (function ($) {
+            $('#mainNav').activateLinks({ selector: 'a', traverse: 2 }, function (items) {
+                var parents = $(items).closest(".has-treeview")
+                parents.addClass('menu-open');
+            });
+        })(jQuery);
+    </script>
 </div>
 </body>
 </html>

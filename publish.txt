@@ -1,0 +1,4 @@
+for IIS on windows :
+dotnet publish --configuration Release --runtime win10-x64 --output C:\inetpub\wwwroot\iclose --self-contained true
+for linux : 
+dotnet publish ./iClose/iClose.csproj --self-contained --runtime linux-musl-x64 --configuration Release --output c:\pub\iClose

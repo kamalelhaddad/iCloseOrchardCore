@@ -1,10 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="{{ Culture.Name }}">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>iClose</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ "PageTitle" | shape_new | shape_stringify }}</title>
+    {% resources type: "Meta" %}
+    {% link type:"image/x-icon", rel:"shortcut icon", href:"~/iCloseTheme/img/icons/logo.png" %}
   <link rel="stylesheet" href="/iCloseTheme/css/vendor.min.css">
   <link rel="stylesheet" href="/iCloseTheme/css/main.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -18,7 +19,7 @@
         <div class="heder__content flex">
           <div class="header__part">
             <a href="/" class="header__logo flex">
-              <img src="iCloseTheme/img/icons/logo.png" alt="">
+              <img src="/iCloseTheme/img/icons/logo.png" alt="">
                 <span><span>i</span>Close.<span>ca</span></span>
             </a>
           </div>
@@ -43,7 +44,7 @@
             <div class="footer__part flex">
                 <div class="footer__left">
                     <a href="#" class="footer__logo">
-                        <img src="iCloseTheme/img/icons/logo.png" alt="">
+                        <img src="/iCloseTheme/img/icons/logo.png" alt="">
                         <span><span>i</span>Close.<span>ca</span></span>
                     </a>
                     <ul class="footer__soc flex">

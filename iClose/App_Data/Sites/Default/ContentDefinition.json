@@ -250,7 +250,6 @@
             },
             "AutoroutePartSettings": {
               "AllowCustomPath": true,
-              "ShowHomepageOption": true,
               "AllowUpdatePath": true
             },
             "ContentIndexSettings": {}
@@ -679,5 +678,5 @@
       "ContentPartFieldDefinitionRecords": []
     }
   ],
-  "Identifier": "4625ynednsjtvsefxqq8kek7d9"
+  "Identifier": "4s4vzs3f5prvd1zavffp9t2y57"
 }

@@ -1584,17 +1584,19 @@ Vvveb.Builder = {
     },
 
     saveAjax: function (fileName, startTemplateUrl, callback, saveUrl) {
-        var data = {};
-        data["file"] = (fileName && fileName != "") ? fileName : Vvveb.FileManager.getCurrentFileName();
-        data["startTemplateUrl"] = startTemplateUrl;
+        var req = {};
+        req["file"] = (fileName && fileName != "") ? fileName : Vvveb.FileManager.getCurrentFileName();
+        req["startTemplateUrl"] = startTemplateUrl;
         if (!startTemplateUrl || startTemplateUrl == null) {
-            data["html"] = this.getHtml();
+            req["html"] = this.getHtml();
         }
 
         $.ajax({
             type: "POST",
             url: saveUrl,//set your server side save script url
-            data: data,
+            data: JSON.stringify(req),
+            dataType: 'json',
+            contentType: 'application/json',
             cache: false,
             success: function (data) {
 
@@ -1835,7 +1837,7 @@ Vvveb.Gui = {
             });
 
             var name = data['name'] = data['file'];
-            data['url'] = data['file'] = data['folder'] + "/" + data['file'];
+            data['url'] = data['file'] = "demo/"+data['folder'] + "/" + data['file'];
 
             Vvveb.FileManager.addPage(data.name, data);
             e.preventDefault();

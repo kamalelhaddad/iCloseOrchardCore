@@ -1,11 +1,11 @@
 using OrchardCore.DisplayManagement.Manifest;
 
 [assembly: Theme(
-    Name = "Rels Admin Theme",
+    Name = "iClose Admin Theme",
     Author = "Kamal Elhaddad",
-    Website = "https://realestatelawyers.ca",
+    Website = "https://dotnet.microsoft.com",
     Version = "1.0.0",
-    Description = "Real Estate Lawyers Admin theme.",
+    Description = "iCLose Admin theme.",
     Tags = new[] { "admin" },
     BaseTheme = "TheAdmin"
 )]

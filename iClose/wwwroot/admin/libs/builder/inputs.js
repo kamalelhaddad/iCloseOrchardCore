@@ -330,7 +330,7 @@ var ImageInput = $.extend({}, Input, {
 		//    //reader.readAsBinaryString(this.files[0]);
 		//    file = this.files[0];
 		//}
-		//this.onclick = imageIsLoaded;
+		this.onclick = imageIsLoaded;
 
 		function imageIsLoaded(e) {
 

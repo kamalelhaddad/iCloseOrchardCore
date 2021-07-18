@@ -4,12 +4,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <PreserveCompilationReferences>true</PreserveCompilationReferences>
+    <UserSecretsId>969fb167-ab68-405d-b999-40f3e515ad9c</UserSecretsId>
   </PropertyGroup>
 
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
     <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-rc2-15734" />
     <PackageReference Include="OrchardCore.Logging.NLog" Version="1.0.0-rc2-15734" />
   </ItemGroup>

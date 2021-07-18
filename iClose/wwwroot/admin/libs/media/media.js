@@ -128,20 +128,20 @@ class MediaModal {
 		let _this = this;
 
 		// Start by fetching the file data from scan.php with an AJAX request
-		$.get(mediaScanUrl, function(data) {
-		//$.get('/this.filemanager/scan.php', function(data) {
+		//$.get(mediaScanUrl, function(data) {
+		////$.get('/this.filemanager/scan.php', function(data) {
 			
 
-			 _this.response = [data],
-			 _this.currentPath = '',
-			 _this.breadcrumbsUrls = [];
+		//	 _this.response = [data],
+		//	 _this.currentPath = '',
+		//	 _this.breadcrumbsUrls = [];
 
-			var folders = [],
-				files = [];
+		//	var folders = [],
+		//		files = [];
 				
 				
-			$(window).trigger('hashchange');	
-		});
+		//	$(window).trigger('hashchange');	
+		//});
 
 		// This event listener monitors changes on the URL. We use it to
 		// capture back/forward navigation in the browser.

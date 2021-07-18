@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using iClose.Models;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Options;
 using OrchardCore.Email;
 
 namespace iClose.Pages
@@ -6,9 +8,11 @@ namespace iClose.Pages
     public class SendModel : PageModel
     {
         private readonly ISmtpService _smtpService;
+        private readonly IOptions<EmailConfigurationOption> _emailConfiguration;
 
-        public SendModel(ISmtpService smtpService) {
+        public SendModel(ISmtpService smtpService, IOptions<EmailConfigurationOption> emailConfiguration) {
             _smtpService = smtpService;
+            _emailConfiguration = emailConfiguration;
         }
         public void OnGet() {
             var query = HttpContext.Request.Query;
@@ -23,7 +27,8 @@ namespace iClose.Pages
 
             var body = $"<table style='width: 100%;'>{template}</table>";
             var mailMessage = new MailMessage() {
-                To = query["admin_email"],
+                //To = query["admin_email"],
+                To = _emailConfiguration.Value.ToEmail,
                 From = query["email"],
                 Body = body,
                 IsBodyHtml = true,

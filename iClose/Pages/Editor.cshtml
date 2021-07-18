@@ -1,0 +1,19 @@
+﻿@page "/editor/{id}"
+
+@inject OrchardCore.IOrchardHelper Orchard
+
+@{
+    var livePage = await Orchard.GetContentItemByIdAsync(Id);
+}
+
+
+<div class="container text-center">
+    <h1>This is the blog post: @livePage.DisplayText</h1>
+    @*<span>@Json.Serialize(livePage)</span>*@
+</div>
+
+@functions
+{
+    [FromRoute]
+    public string Id { get; set; }
+}

@@ -88,6 +88,7 @@ using System.Reflection;
 [assembly: OrchardCore.Modules.Manifest.ModuleNameAttribute("OrchardCore.AdminMenu")]
 [assembly: OrchardCore.Modules.Manifest.ModuleNameAttribute("iCloseAdmin")]
 [assembly: OrchardCore.Modules.Manifest.ModuleNameAttribute("iCloseTheme")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("969fb167-ab68-405d-b999-40f3e515ad9c")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("iClose")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

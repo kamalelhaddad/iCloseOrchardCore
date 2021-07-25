@@ -1,32 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+﻿<!DOCTYPE html>
+<html lang="{{ Culture.Name }}">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>My page</title>
-    <!-- Bootstrap core CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-    <style>
-		html, body
-		{
-			width:100%;
-			height:100%;
-		}
-    </style>
-  </head>
-  <body>
-    <!-- Page Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h1 class="mt-5">Bootstrap 4 start page</h1>
-          <p class="lead">Start by dragging components to page or double click to edit text</p>
-        </div>
-      </div>
+    <title>iClose</title>
+    
+    <link rel="shortcut icon" href="/iCloseTheme/img/icons/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/iCloseTheme/css/vendor.min.css">
+    <link rel="stylesheet" href="/iCloseTheme/css/main.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body dir="">
+    <div class="site__container">
+        <header class="header">
+            <div class="container">
+                <div class="heder__content flex">
+                    <div class="header__part">
+                        <a href="/" class="header__logo flex">
+                            <img src="/iCloseTheme/img/icons/logo.png" alt="">
+                            <span><span>i</span>Close.<span>ca</span></span>
+                        </a>
+                    </div>
+                    {% shape "menu", alias: "alias:default", cache_id: "default", cache_tag: "alias:default" %}
+                    <div class="heaer__hidden">
+                        <a onclick="openNav()" href="#" class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="wrapper>
+        {% render_section " Content" %}
     </div>
-  </body>
+    <div class="popup" id="thanks__popup">
+        <div onclick="closePopup()" class="popup__inderlay"></div>
+        <div class="popup__container">
+            <div class="popup__img">
+                <svg width="87" height="79" viewBox="0 0 87 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M74.625 30.8195C70.529 30.8195 66.429 29.2595 63.309 26.1395C60.289 23.1195 58.625 19.0995 58.625 14.8195C58.625 10.5475 60.293 6.5275 63.309 3.5115C67.985 -1.1725 75.597 -1.1685 80.281 3.5115C84.957 8.1915 84.957 15.8035 80.281 20.4835C79.501 21.2635 78.233 21.2635 77.453 20.4835C76.673 19.7035 76.673 18.4355 77.453 17.6555C80.569 14.5355 80.569 9.4595 77.453 6.3395C74.329 3.2235 69.253 3.2235 66.137 6.3395C61.457 11.0195 61.457 18.6315 66.137 23.3115C70.813 27.9875 78.425 27.9915 83.109 23.3115C83.889 22.5315 85.157 22.5315 85.937 23.3115C86.717 24.0915 86.717 25.3595 85.937 26.1395C82.817 29.2555 78.721 30.8195 74.625 30.8195Z" fill="#E02222" />
+                    <path d="M49.1679 56.2753C44.8959 56.2753 40.8759 54.6113 37.8559 51.5913C34.8319 48.5713 33.1719 44.5513 33.1719 40.2753C33.1719 35.9993 34.8359 31.9833 37.8559 28.9673C38.6359 28.1873 39.9079 28.1873 40.6839 28.9673C41.4639 29.7473 41.4639 31.0153 40.6839 31.7953C38.4239 34.0593 37.1719 37.0713 37.1719 40.2753C37.1719 43.4833 38.4239 46.4993 40.6839 48.7633C42.9479 51.0273 45.9639 52.2793 49.1679 52.2793H49.1719C52.3799 52.2793 55.3959 51.0273 57.6559 48.7633C58.4359 47.9873 59.7039 47.9873 60.4839 48.7633C61.2639 49.5433 61.2639 50.8153 60.4839 51.5913C57.4679 54.6153 53.4479 56.2793 49.1759 56.2793L49.1679 56.2753Z" fill="#E02222" />
+                    <path d="M26.538 78.8995C22.442 78.8995 18.342 77.3395 15.226 74.2195C8.98197 67.9795 8.98197 57.8275 15.226 51.5915L63.31 3.51151C64.09 2.73151 65.358 2.73151 66.138 3.51151C66.918 4.29151 66.918 5.55951 66.138 6.33951L18.054 54.4195C13.374 59.0955 13.374 66.7115 18.054 71.3915C22.734 76.0715 30.342 76.0675 35.022 71.3915L83.11 23.3075C83.89 22.5275 85.158 22.5275 85.938 23.3075C86.718 24.0875 86.718 25.3555 85.938 26.1355L37.85 74.2195C34.734 77.3435 30.638 78.8995 26.538 78.8995Z" fill="#E02222" />
+                    <path d="M38 15.2473H2C0.9 15.2473 0 14.3513 0 13.2473C0 12.1433 0.9 11.2473 2 11.2473H38C39.104 11.2473 40 12.1433 40 13.2473C40 14.3513 39.104 15.2473 38 15.2473Z" fill="#E02222" />
+                    <path d="M26 27.2473H2C0.9 27.2473 0 26.3513 0 25.2473C0 24.1433 0.9 23.2473 2 23.2473H26C27.104 23.2473 28 24.1433 28 25.2473C28 26.3513 27.104 27.2473 26 27.2473Z" fill="#E02222" />
+                    <path d="M14 39.2473H2C0.9 39.2473 0 38.3513 0 37.2473C0 36.1433 0.9 35.2473 2 35.2473H14C15.104 35.2473 16 36.1433 16 37.2473C16 38.3513 15.104 39.2473 14 39.2473Z" fill="#E02222" />
+                </svg>
+            </div>
+            <div class="popup__title">
+                Thank You
+            </div>
+            <div class="popup__text">
+                Your message has been successfully sent!
+            </div>
+            <div class="button_su popup__button">
+                <span class="su_button_circle"></span>
+                <a onclick="closePopup()" href="#" class="button_su_inner">
+                    <span class="button_text_container">Ok</span>
+                </a>
+            </div>
+        </div>
+
+        {% script name:"jquery", use_cdn:"true", at:"Foot" %}
+
+        <script src="/iCloseTheme/js/vendor.min.js"></script>
+        <script src="/iCloseTheme/js/custom.min.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        {% script at:"Foot", src:"~/OrchardCore.Menu/Scripts/activate-links.min.js", debug_src:"~/OrchardCore.Menu/Scripts/activate-links.js" %}
+
+        {% resources type: "FootScript" %}
+        <resources type="Footer" />
+        <script>
+            (function ($) {
+                $('#mainNav').activateLinks({ selector: 'a', traverse: 2 }, function (items) {
+                    var parents = $(items).closest(".has-treeview")
+                    parents.addClass('menu-open');
+                });
+            })(jQuery);
+        </script>
+    </div>
+</body>
 </html>

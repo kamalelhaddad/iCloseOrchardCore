@@ -1,4 +1,4 @@
-﻿@page "/editor/{id}"
+﻿@page "/liveEditor/{id}"
 
 @inject OrchardCore.IOrchardHelper Orchard
 
@@ -9,7 +9,8 @@
 
 <div class="container text-center">
     <h1>This is the blog post: @livePage.DisplayText</h1>
-    @*<span>@Json.Serialize(livePage)</span>*@
+    <hr/>
+    @Orchard.ConsoleLog(Json.Serialize(livePage))
 </div>
 
 @functions
